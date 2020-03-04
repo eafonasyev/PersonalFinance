@@ -20,7 +20,7 @@ public class Settings {
     public static final String FORMAT_AMOUNT = "%.2f";
     public static final String FORMAT_RATE = "%.f";
     public static final String DATE_FORMAT = "dd.MM.yyyy";
-    public static final String DAY_MONTH = "MM.yyyy";
+    public static final String DAY_MONTH = "MMMM-yyyy";
     public static final String MONTH_YEAR= "dd.MM.yyyy";
 
     public static final int COUNT_OVERVIEW_ROWS = 10;

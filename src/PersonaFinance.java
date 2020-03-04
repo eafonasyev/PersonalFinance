@@ -1,4 +1,5 @@
 import jdk.swing.interop.SwingInterOpUtils;
+import settings.Format;
 import settings.Text;
 
 import java.awt.*;
@@ -6,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,7 +15,8 @@ public class PersonaFinance {
     public static void main(String[] args) {
         init();
         System.out.println(Text.get("PROGRAM_NAME"));
-        System.out.println(Arrays.toString(Text.getMounth()));
+        Text.init();
+        System.out.println( Format.monthFormat(new Date()));
     }
 
     private static void init() {
