@@ -1,5 +1,7 @@
 package Objects;
 
+import saveLoad.SaveData;
+
 import java.util.Objects;
 import java.util.List;
 
@@ -95,5 +97,24 @@ public class Account extends Common{
              this.amount=+transfer.getToAmount();
          }
      }
+    }
+
+    @Override
+    public void postAdd(SaveData sd) {
+
+        setAmountFromTransactionAndTransfer(sd.getTransactions(), sd.getTransfers());
+    }
+
+    @Override
+    public void postEdit(SaveData sd) {
+        for(Transaction t : sd.getTransactions()) {
+            if(t.getAccount().equals( sd.getOldCommon())) t.setAccount(this);
+        }
+        for (Transfer t : sd.getTransfers()){
+            if(t.getFromAccount().equals(sd.getOldCommon())) t.setFromAccount(this);
+            if(t.getToAccount().equals(sd.getOldCommon())) t.setToAccount(this);
+        }
+        setAmountFromTransactionAndTransfer(sd.getTransactions(), sd.getTransfers());
+
     }
 }

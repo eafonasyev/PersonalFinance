@@ -1,5 +1,7 @@
 package Objects;
 
+import saveLoad.SaveData;
+
 import java.util.Date;
 
 public class Transaction extends Common {
@@ -84,6 +86,25 @@ public class Transaction extends Common {
                 ", note='" + note + '\'' +
                 ", date=" + date +
                 '}';
+    }
+
+
+    @Override
+    public void postAdd(SaveData sd) {
+        setAmounts(sd);
+    }
+    @Override
+    public void postEdit(SaveData sd) {
+        setAmounts(sd);
+    }
+    @Override
+    public void postRemove(SaveData sd) {
+        setAmounts(sd);
+    }
+    private void setAmounts(SaveData sd) {
+        for (Account a: sd.getAccounts()){
+          a.setAmountFromTransactionAndTransfer(sd.getTransactions(),sd.getTransfers());
+        }
     }
 }
 

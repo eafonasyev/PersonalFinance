@@ -1,5 +1,7 @@
 package Objects;
 
+import saveLoad.SaveData;
+
 import java.util.Date;
 import java.util.List;
 
@@ -102,6 +104,23 @@ public class Transfer extends Common{
     @Override
     public String getValueForComboBox() {
         return super.getValueForComboBox();
+    }
+    @Override
+    public void postAdd(SaveData sd) {
+        setAmounts(sd);
+    }
+    @Override
+    public void postEdit(SaveData sd) {
+        setAmounts(sd);
+    }
+    @Override
+    public void postRemove(SaveData sd) {
+        setAmounts(sd);
+    }
+    private void setAmounts(SaveData sd) {
+        for (Account a: sd.getAccounts()){
+            a.setAmountFromTransactionAndTransfer(sd.getTransactions(),sd.getTransfers());
+        }
     }
 
 }
