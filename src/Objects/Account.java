@@ -15,6 +15,16 @@ public class Account extends Common{
     public Account() {
     }
 
+     public Account(String title){
+        this.title = title;
+     }
+
+    public Account(String title, Currency currency, double startAmount) {
+        this.title = title;
+        this.currency = currency;
+        this.startAmount = startAmount;
+    }
+
     public Account(String title, Currency currency, double startAmount, double amount) throws ModelException{
         if(title.length()==0) throw new ModelException(ModelException.CODE_EMPTY);
         if(currency==null) throw new ModelException(ModelException.CURRENCY_EMPTY);
