@@ -3,7 +3,6 @@ import jdk.swing.interop.SwingInterOpUtils;
 import saveLoad.SaveData;
 import settings.Format;
 import settings.Text;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -71,12 +70,12 @@ public class PersonaFinance {
             transactions.add(new Transaction(article2,ac1,2500,"квартира"));
             transactions.add(new Transaction(article3,ac3,2700,"Халык"));
 
-           // SaveData sd = SaveData.getInstance();
-            //sd.setCurrencies(currencies);
-           // sd.setArticles(articles);
-           // sd.setAccounts(accounts);
-          //  sd.save();
-           // System.out.println(sd);
+            SaveData sd = SaveData.getInstance();
+            sd.setCurrencies(currencies);
+            sd.setArticles(articles);
+            sd.setAccounts(accounts);
+            sd.save();
+            System.out.println(sd);
 
         } catch (Exception e) {
             e.printStackTrace();

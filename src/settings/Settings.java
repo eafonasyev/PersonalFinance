@@ -28,7 +28,7 @@ public class Settings {
     public static final String[] CURRENCY_CODES = new String[]{"RUB","USA","KZT","EUR","FRK"};
 
     public  static final File FILE_SETTINGS =  new File("saves/settings.ini");
-    public  static  File FILE_SAVES = new File("saves/save_file1.ini");
+    public  static  File FILE_SAVES = new File("saves/save_file.ini");
 
     public static void init(){
         try {
