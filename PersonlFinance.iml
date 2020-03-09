@@ -7,16 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../lerning java/Создание крупного проекта на Java с нуля [Михаил Русаков]/files/ini4j-0.5.4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../lerning java/Создание крупного проекта на Java с нуля [Михаил Русаков]/files/jcommon-1.0.23.jar!/" />
@@ -33,7 +24,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/javax.activation-1.2.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../learning java/video java/Создание крупного проекта на Java с нуля [Михаил Русаков]/files/source/ini4j-0.5.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -42,7 +33,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/jaxb-api-2.3.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../learning java/video java/Создание крупного проекта на Java с нуля [Михаил Русаков]/files/source/jcommon-1.0.23.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -51,7 +42,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/jaxb-core-2.3.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../learning java/video java/Создание крупного проекта на Java с нуля [Михаил Русаков]/files/source/jdatepicker-1.3.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -60,7 +51,43 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/jaxb-impl-2.3.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../learning java/video java/Создание крупного проекта на Java с нуля [Михаил Русаков]/files/source/jfreechart-1.0.19.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/javax.activation-1.2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/jaxb-api-2.3.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/jaxb-core-2.3.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/jaxb-impl-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
