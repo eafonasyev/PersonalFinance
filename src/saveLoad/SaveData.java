@@ -36,7 +36,7 @@ public class SaveData extends Common{
     }
 
     public SaveData() {
-        //load();
+        load();
         this.filter = new Filter();
 
     }

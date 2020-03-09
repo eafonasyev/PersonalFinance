@@ -16,7 +16,9 @@ import java.util.logging.Logger;
 public class PersonaFinance {
     public static void main(String[] args) throws ModelException {
         init();
-        testModel();
+        SaveData sd = SaveData.getInstance();
+        System.out.println(sd);
+       // testModel();
     }
 
     private static void init() {
