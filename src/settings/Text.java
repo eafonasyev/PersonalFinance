@@ -7,7 +7,9 @@ final  public  class Text {
      private static final HashMap<String,String> data = new HashMap<>();
 
      public static String get (String key){
-         return data.get(key);
+        if(data.containsKey(key))return  data.get(key);
+          System.out.println("Такого ключа нет");
+         return "";
      }
 
      public static String [] getMounth(){
@@ -58,6 +60,9 @@ final  public  class Text {
          data.put("ERROR_ACCOUNT_EMPTY","Не выбран счет");
          data.put("ERROR_RATE_INCORRECT","Не верный rate");
          data.put("ERROR_AMOUNT_FORMAT","неверный формат числа");
+
+         data.put("YES","Да");
+         data.put("NO","нет");
 
      }
 }
