@@ -36,10 +36,8 @@ public class Currency extends Common {
         this.title = title;
     }
 
-    public String getCode() {
-        return code;
+    public String getCode() { return code;
     }
-
     public void setCode(String code) {
         this.code = code;
     }

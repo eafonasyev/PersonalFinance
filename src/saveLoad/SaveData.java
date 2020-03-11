@@ -4,6 +4,7 @@ import Objects.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 
 public class SaveData extends Common{
@@ -175,6 +176,16 @@ public class SaveData extends Common{
         else if (c instanceof Transaction) return  transactions;
         else if (c instanceof Currency) return currencies;
         return null;
+    }
+    public void updateCurencies() throws Exception {
+        HashMap<String,Double> rates = RateCurrency.getRates(getBaseCurency());
+        for(Currency c : currencies){
+             c.setRate(rates.get(c.getCode()));
+        }
+
+        for(Account a : accounts){
+            a.getCurrency().setRate(rates.get(a.getCurrency().getCode()));
+        }
     }
 
 }
