@@ -61,6 +61,38 @@ final  public  class Text {
          data.put("ERROR_RATE_INCORRECT","Не верный rate");
          data.put("ERROR_AMOUNT_FORMAT","неверный формат числа");
 
+         data.put("FILE_MENU_NEW","Новый");
+         data.put("FILE_MENU_OPEN","Открыть");
+         data.put("FILE_MENU_SAVE","Сохранить");
+         data.put("FILE_MENU_EXIT","Выход");
+         data.put("FILE_MENU_UPDATE_CURRINCIES","Обновить валюты");
+         data.put("MENU_EDIT_ADD","Добавить");
+         data.put("MENU_EDI_EDIT","Редактировать");
+         data.put("MENU_EDIT_DELETE","Удалить");
+
+
+         data.put("MENU_VIEW_OVERVIEW","Вид");
+         data.put("MENU_VIEW_ACCOUNTS","Счета");
+         data.put("MENU_VIEW_ARTICLES","Статьи");
+         data.put("MENU_VIEW_TRANSACTIONS","Транзакции");
+         data.put("MENU_VIEW_TRANSFERS","Переводы");
+         data.put("MENU_VIEW_HELP","Помощь");
+         data.put("MENU_VIEW_STATISTICS","Статистика");
+         data.put("MENU_VIEW_CURRENCIES","Валюты");
+         data.put("MENU_HELP_ABOUT","Помощь");
+
+         data.put("TOOLBAR_HELP","Помощь");
+         data.put("TOOLBAR_STATISTICS","Статистика");
+         data.put("TOOLBAR_CURRENCIES","Валюты");
+         data.put("TOOLBAR_TRANSACTIONS","Транзакции");
+         data.put("TOOLBAR_ACCOUNTS","Счета");
+         data.put("TOOLBAR_ARTICLES","Статьи");
+         data.put("TOOLBAR_OVERVIEW","Вид");
+
+         data.put("ADD","Добавить");
+         data.put("EDIT","Рудактировать");
+         data.put("DELETE","Удалить");
+
          data.put("YES","Да");
          data.put("NO","нет");
 

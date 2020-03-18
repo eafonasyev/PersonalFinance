@@ -1,12 +1,10 @@
 package settings;
 
-import Objects.Filter;
+import objects.Filter;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Currency;
 import java.util.Date;
-import java.util.Set;
 
 public class Format {
     public static  String amount(double amount){

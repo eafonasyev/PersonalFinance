@@ -1,9 +1,8 @@
-package Objects;
+package objects;
 
 import saveLoad.SaveData;
 
 import java.util.Date;
-import java.util.List;
 
 public class Transfer extends Common{
     private Account fromAccount;

@@ -1,10 +1,9 @@
-package Objects;
+package objects;
 
 import java.time.YearMonth;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.Objects;
 
 public class Filter {
     public static final int STEP_DAY = 0;

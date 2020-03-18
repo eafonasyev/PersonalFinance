@@ -1,6 +1,6 @@
 package saveLoad;
 
-import Objects.*;
+import objects.*;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,15 +1,12 @@
-import Objects.*;
-import jdk.swing.interop.SwingInterOpUtils;
+import gui.MainFrame;
+import objects.*;
 import saveLoad.SaveData;
-import settings.Format;
+import settings.Style;
 import settings.Text;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,10 +14,13 @@ public class PersonaFinance {
     public static void main(String[] args) throws Exception {
         init();
         SaveData sd = SaveData.getInstance();
-        sd.updateCurencies();
-        sd.save();
-        System.out.println(sd.getCurrencies());
-       // testModel();
+        //sd.updateCurencies();
+       // sd.save();
+        System.out.println(sd);
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.setVisible(true);
+
+
     }
 
     private static void init() {
