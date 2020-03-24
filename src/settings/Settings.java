@@ -16,12 +16,13 @@ import java.util.prefs.Preferences;
 public class Settings {
 
     public static final File FONT_STILE = new File("fonts/18223.ttf");
-    public static final File saveDir = new File("saves/");
+    public static final File SAVEDIR = new File("saves/");
     public static final String FORMAT_AMOUNT = "%.2f";
     public static final String FORMAT_RATE = "%.f";
     public static final String DATE_FORMAT = "dd.MM.yyyy";
     public static final String DAY_MONTH = "MMMM-yyyy";
-    public static final String MONTH_YEAR= "dd.MM.yyyy";
+    public static final String MONTH_YEAR = "yyyy";
+    public static final String SAVE_FORMANT_FILE= ".myrus";
 
     public static final int COUNT_OVERVIEW_ROWS = 10;
 

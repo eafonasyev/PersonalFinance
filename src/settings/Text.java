@@ -92,9 +92,38 @@ final  public  class Text {
          data.put("ADD","Добавить");
          data.put("EDIT","Рудактировать");
          data.put("DELETE","Удалить");
+         data.put("CANCEL","Отмена");
 
          data.put("YES","Да");
          data.put("NO","нет");
+         data.put("OPEN_BUTTON_TEXT","Открыть");
+         data.put("SAVE_BUTTON_TEXT","Сохранить");
+         data.put("CANCEL_BUTTON_TEXT","Отменить");
+         data.put("NAME_LABEL_TEXT","Имя файла:");
+         data.put("TYPE_lABEL_TEXT","Тип файла:");
+         data.put("LABEL_TITLE","Счета");
+         data.put("LABEL_CURRENCIES","Вылюты");
+         data.put("LABEL_START_AMOUNT","Стартовая сумма");
+         data.put("LABEL_DATE","Дата");
+         data.put("LABEL_ARTICLES","Статьи");
+         data.put("LABEL_ACCOUNTS","Счета");
+         data.put("LABEL_AMOUNT","Сумма");
+         data.put("LABEL_NOTE","Комментарий");
+         data.put("LABEL_ACCOUNTS_FROM","Откуда");
+         data.put("LABEL_ACCOUNTS_TO","Куда");
+         data.put("LABEL_AMOUNT_FROM","Ушло");
+         data.put("LABEL_AMOUNT_TO","Пришло");
 
+         data.put("LABEL_CODE","Код");
+         data.put("LABEL_ON","Включена");
+         data.put("LABEL_BASE","Базовая");
+         data.put("LABEL_RATE","Индекс");
+
+         data.put("ERROR","Ошибка");
+         data.put("DIALOG_ABOUT","О проограмме");
+         data.put("ABOUT","<bode>"
+                 +"<h1>Добашняя бухгалтерия</h1>"
+                 +"<p><img src=file:image/pigs.png></p>"
+                 +"</body>");
      }
 }

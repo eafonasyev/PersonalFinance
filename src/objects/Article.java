@@ -25,9 +25,7 @@ public class Article extends Common {
 
     @Override
     public String toString() {
-        return "Article{" +
-                "title='" + title + '\'' +
-                '}';
+        return  title ;
     }
 
     @Override

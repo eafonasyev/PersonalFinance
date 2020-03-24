@@ -126,7 +126,7 @@ public class SaveData extends Common{
     public ArrayList<Currency> getEnableCurrencies(){
         ArrayList  list = new ArrayList<>();
         for(Currency c : currencies)
-            if(c.getBase()) list.add(c);
+            if(c.getOn()) list.add(c);
         return list;
     }
     public ArrayList<Transaction> getFilterTransaction(){

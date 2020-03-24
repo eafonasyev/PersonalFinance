@@ -14,6 +14,9 @@ public class Style {
 
     public static final EmptyBorder EMPTY_BORDER = new EmptyBorder(10, 10, 10, 10);
 
+    public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
+    public static final int PUDDING_DIALOG = 10;
+    public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(50,50);
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");
     public static final ImageIcon ICON_TOOLBAR_OVERVIEW = new ImageIcon("image/icon_toolbar_overview.png");
     public static final ImageIcon ICON_TOOLBAR_ACTICLES = new ImageIcon("image/icon_toolbar_articles.png");
@@ -27,6 +30,11 @@ public class Style {
     public static final ImageIcon ICON_MENU_EDIT = new ImageIcon("image/ICON_MENU_EDIT.png");
     public static final ImageIcon ICON_MENU_VIEW = new ImageIcon("image/ICON_MENU_VIEW.png");
     public static final ImageIcon ICON_MENU_HELP = new ImageIcon("image/ICON_MENU_HELP.png");
+    public static final ImageIcon ICON_CANCEL = new ImageIcon("image/ICON_CANCEL.png");
+
+    public static final ImageIcon ICON_ACCOUNT_LABEL = new ImageIcon("image/ICON_TITLE_ACCOUNT.png");
+    public static final ImageIcon ICON_START_AMOUNT = new ImageIcon("image/ICON_START_AMOUNT.png");
+    public static final ImageIcon ICON_CURRENCIES = new ImageIcon("image/ICON_CURRENCIES.png");
 
     public static final ImageIcon ICON_MENU_FILE_NEW = new ImageIcon("image/ICON_MENU_FILE_NEW.png");
     public static final ImageIcon ICON_MENU_FILE_OPEN = new ImageIcon("image/ICON_MENU_FILE_OPEN.png");
@@ -43,8 +51,22 @@ public class Style {
     public static final ImageIcon ICON_MENU_VIEW_TRANSFERS = new ImageIcon("image/ICON_MENU_VIEW_TRANSFERS.png");
     public static final ImageIcon ICON_MENU_VIEW_HELP = new ImageIcon("image/ICON_MENU_VIEW_HELP.png");
     public static final ImageIcon ICON_MENU_VIEW_STATISTICS = new ImageIcon("image/ICON_MENU_VIEW_STATISTICS.png");
+    public static final ImageIcon ICON_INFO = new ImageIcon("image/ICON_INFO.png");
     public static final ImageIcon ADD = new ImageIcon("image/ADD.png");
     public static final ImageIcon EDIT = new ImageIcon("image/EDIT.png");
     public static final ImageIcon DELETE = new ImageIcon("image/DELETE.png");
+    public static final ImageIcon ICON_DATE = new ImageIcon("image/ICON_DATE.png");
+    public static final ImageIcon ICON_ARTICLES = new ImageIcon("image/ICON_MENU_VIEW_ARTICLES.png");
+    public static final ImageIcon ICON_ACCOUNTS = new ImageIcon("image/ICON_MENU_VIEW_ACCOUNTS.png");
+    public static final ImageIcon ICON_AMOUNT = new ImageIcon("image/ICON_AMOUNT.png");
+    public static final ImageIcon ICON_NOTE = new ImageIcon("image/ICON_NOTE.png");
+
+    public static final ImageIcon ICON_CODE = new ImageIcon("image/ICON_CODE.png");
+    public static final ImageIcon ICON_ON = new ImageIcon("image/ICON_ON.png");
+    public static final ImageIcon ICON_BASE = new ImageIcon("image/ICON_BASE.png");
+    public static final ImageIcon ICON_RATE = new ImageIcon("image/ICON_RATE.png");
+
     public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
+
+
 }

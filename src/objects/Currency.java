@@ -68,13 +68,7 @@ public class Currency extends Common {
 
     @Override
     public String toString() {
-        return "Currency{" +
-                "title='" + title + '\'' +
-                ", code='" + code + '\'' +
-                ", rate=" + rate +
-                ", isOn=" + isOn +
-                ", isBase=" + isBase +
-                '}';
+        return  title ;
     }
 
     @Override

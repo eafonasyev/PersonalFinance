@@ -82,12 +82,7 @@ public class Account extends Common{
 
     @Override
     public String toString() {
-        return "Account{" +
-                "title='" + title + '\'' +
-                ", currency='" + currency + '\'' +
-                ", startAmount=" + startAmount +
-                ", amount=" + amount +
-                '}';
+        return title ;
     }
 
     @Override
