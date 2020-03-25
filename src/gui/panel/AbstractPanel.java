@@ -6,19 +6,21 @@ import gui.Refresh;
 import javax.swing.*;
 
 public class AbstractPanel extends JPanel implements Refresh {
-    private final MainFrame frame;
+    protected final MainFrame frame;
 
     public AbstractPanel(MainFrame frame){
         this.frame = frame;
-        init();
+
     }
+
 
     @Override
     public void refresh() {
-
+      removeAll();
+      init();
     }
 
-    private void init() {
+    protected void init() {
     }
 
 }

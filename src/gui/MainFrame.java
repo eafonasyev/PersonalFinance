@@ -1,6 +1,7 @@
 package gui;
 
 import dialog.*;
+import gui.panel.LeftPanel;
 import menu.MainMenu;
 import settings.Style;
 import settings.Text;
@@ -11,42 +12,35 @@ import java.awt.*;
 public class MainFrame extends JFrame implements Refresh {
 
     private GridBagConstraints constraints;
+
     private final MainMenu  mb;
-    private MainToolBar mainToolBar;
+    private MainToolBar tb;
+    private LeftPanel leftPanel;
     public MainFrame(){
         super(Text.get("PROGRAM_NAME"));
-        new CurrencyEditDialog(this).showDialog();
         setResizable(false);
-        //setLocationRelativeTo(null);
-        setSize(770,500);
         setIconImage(Style.ICON_MAIN.getImage());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        MainFileChooser fc = new MainFileChooser(this);
-        fc.open();
 
         mb = new MainMenu(this);
         setJMenuBar(mb);
 
-        setLayout(new GridLayout());
+        setLayout(new GridBagLayout());
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.gridwidth = 2;
 
-        mainToolBar = new MainToolBar();
-        add(mainToolBar,constraints);
-        add(new MainDatePicker().getDatePicker());
+        tb = new MainToolBar();
+        add(tb,constraints);
 
         constraints.gridy = 1;
         constraints.gridwidth = 1;
         constraints.anchor = GridBagConstraints.NORTH;
-
-
-        //setLocationRelativeTo(null);
-
-
-
+        leftPanel = new LeftPanel(this);
+        add(leftPanel,constraints);
+        pack();
+        setLocationRelativeTo(this);
     }
 
     @Override
@@ -54,5 +48,9 @@ public class MainFrame extends JFrame implements Refresh {
        SwingUtilities.updateComponentTreeUI(this);
        pack();
        mb.refresh();
+       leftPanel.refresh();
+    }
+    public MainMenu getMb() {
+        return mb;
     }
 }

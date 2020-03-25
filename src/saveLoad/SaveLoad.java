@@ -7,7 +7,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 public class SaveLoad {
-    public static void sava(SaveData sd){
+    public static void save(SaveData sd){
         try {
             JAXBContext context = JAXBContext.newInstance(Wrapper.class);
             Marshaller m = context.createMarshaller();
@@ -40,7 +40,7 @@ public class SaveLoad {
             sd.setTransactions(wrapper.getTransactions());
             sd.setTransfers(wrapper.getTransfers());
         } catch (JAXBException e) {
-            e.printStackTrace();
+            System.out.println("Файл не существует!");
         }
 
 

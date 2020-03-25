@@ -43,9 +43,13 @@ public class SaveData extends Common{
     }
     public void load(){
        SaveLoad.load(this);
+       //sort();
+        for(Account a : accounts){
+            a.setAmountFromTransactionAndTransfer(transactions,transfers);
+        }
     }
     public void save(){
-        SaveLoad.sava(this);
+        SaveLoad.save(this);
         saved = true;
     }
     public boolean isSaved(){

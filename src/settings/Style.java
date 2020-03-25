@@ -6,17 +6,25 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class Style {
-    public static final Color COLOR_BOTTON_NORMAL = new Color(240, 240, 240, 240);
-    public static final Color COLOR_BOTTON_HOVER = Color.green;
 
+    public static final Color COLOR_BOTTON_HOVER = Color.green;
     public static final Font FONT_BOTTON_TOOLBAR = new Font("Roboto-ligth", Font.BOLD, 14);
     public static final Font FONT_BOTTON_MAIN = new Font("Roboto-ligth", Font.BOLD, 14);
+    public static final Font FONT_PANEL_LEFT = new Font("Roboto-ligth", Font.BOLD, 12);
 
-    public static final EmptyBorder EMPTY_BORDER = new EmptyBorder(10, 10, 10, 10);
-
-    public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
+    public static final int PUDDING_BALLANCE = 3;
+    public static final int PUDDING_BALLANCE_BIG = 15 ;
+    public static final int PUDDING_EMPTY = 0;
     public static final int PUDDING_DIALOG = 10;
+
+    public static final Color COLOR_BOTTON_NORMAL = new Color(240, 240, 240, 240);
+    public static final EmptyBorder EMPTY_BORDER = new EmptyBorder(10, 10, 10, 10);
+    public static final EmptyBorder LEFT_PANEL_BORDER = new EmptyBorder(5, 5, 5, 5);
+    public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
     public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(50,50);
+    public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
+    public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
+
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");
     public static final ImageIcon ICON_TOOLBAR_OVERVIEW = new ImageIcon("image/icon_toolbar_overview.png");
     public static final ImageIcon ICON_TOOLBAR_ACTICLES = new ImageIcon("image/icon_toolbar_articles.png");
@@ -66,7 +74,6 @@ public class Style {
     public static final ImageIcon ICON_BASE = new ImageIcon("image/ICON_BASE.png");
     public static final ImageIcon ICON_RATE = new ImageIcon("image/ICON_RATE.png");
 
-    public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
 
 
 }

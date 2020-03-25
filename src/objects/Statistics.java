@@ -18,7 +18,7 @@ public class Statistics {
         SaveData sd = SaveData.getInstance();
         double amount = 0;
         for(Account account : sd.getAccounts()){
-            amount +=account.getAmount()+account.getCurrency().getRateByCurrency(currency);
+            amount +=account.getAmount()* account.getCurrency().getRateByCurrency(currency);
         }
         return amount;
     }

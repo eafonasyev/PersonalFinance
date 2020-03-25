@@ -94,7 +94,7 @@ public class Account extends Common{
      for(Transaction transaction : transactionList)
          if(transaction.getAccount().equals(this)){
              this.amount += transaction.getAmount();}
-     for(Transfer transfer : transferList) {
+    for(Transfer transfer : transferList) {
          if (transfer.getFromAccount().equals(this)) {
              this.amount -= transfer.getFromAmount();
          }
