@@ -127,6 +127,7 @@ final  public  class Text {
                  +"</body>");
          data.put("BALANCE_CURRENCIES",  "Баланс по всем валютам:   ");
          data.put("BALANCE_CURRENCIES_B","Итоговая сумма по валютам:");
+         data.put("LAST_TRANSACTIONS","Последнии транзакции");
 
      }
 }

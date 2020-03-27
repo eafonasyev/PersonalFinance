@@ -23,6 +23,8 @@ public class Style {
     public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
     public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(50,50);
     public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
+    public static final Color COLOR_AMOUNT_NEGATIVE = Color.RED;
+    public static final Color COLOR_AMOUNT_POSITIVE = Color.green;
     public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");

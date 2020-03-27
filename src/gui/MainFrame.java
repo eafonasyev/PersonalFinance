@@ -1,7 +1,7 @@
 package gui;
 
-import dialog.*;
 import gui.panel.LeftPanel;
+import gui.panel.OverviewPanel;
 import menu.MainMenu;
 import settings.Style;
 import settings.Text;
@@ -37,8 +37,10 @@ public class MainFrame extends JFrame implements Refresh {
         constraints.gridy = 1;
         constraints.gridwidth = 1;
         constraints.anchor = GridBagConstraints.NORTH;
+
         leftPanel = new LeftPanel(this);
         add(leftPanel,constraints);
+        
         pack();
         setLocationRelativeTo(this);
     }
