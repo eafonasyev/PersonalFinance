@@ -18,7 +18,7 @@
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>77.793</rate>
+            <rate>77.733</rate>
             <title>Доллар</title>
         </currency>
         <startAmount>3000.0</startAmount>
@@ -30,7 +30,7 @@
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>77.793</rate>
+            <rate>77.733</rate>
             <title>Доллар</title>
         </currency>
         <startAmount>3000.0</startAmount>
@@ -69,14 +69,14 @@
         <base>false</base>
         <code>EUR</code>
         <on>false</on>
-        <rate>84.149</rate>
+        <rate>85.739</rate>
         <title>Евро</title>
     </currency>
     <currency>
         <base>false</base>
         <code>USD</code>
         <on>true</on>
-        <rate>77.793</rate>
+        <rate>77.733</rate>
         <title>Доллар</title>
     </currency>
     <transactions>
@@ -116,6 +116,196 @@
             <title>Столовая</title>
         </article>
         <date>2019-02-27T22:19:23.927+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </account>
+        <amount>30000.0</amount>
+        <article>
+            <title>Зарплата</title>
+        </article>
+        <date>2019-03-28T19:58:19.178+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </account>
+        <amount>-1500.0</amount>
+        <article>
+            <title>Продукты</title>
+        </article>
+        <date>2019-03-28T19:58:19.178+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-5500.0</amount>
+        <article>
+            <title>ЖКХ</title>
+        </article>
+        <date>2019-03-28T19:58:19.178+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-4000.0</amount>
+        <article>
+            <title>ЖКХ</title>
+        </article>
+        <date>2019-03-28T19:58:19.178+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>100000.0</startAmount>
+            <title>Депозит в банке (RUB)</title>
+        </account>
+        <amount>1000.0</amount>
+        <article>
+            <title>Проценты по депозиту</title>
+        </article>
+        <date>2019-03-28T19:58:19.178+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-851.0</amount>
+        <article>
+            <title>Столовая</title>
+        </article>
+        <date>2019-03-28T08:26:32.799+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-656.0</amount>
+        <article>
+            <title>Продукты</title>
+        </article>
+        <date>2019-03-27T19:58:29.464+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </account>
+        <amount>-441.0</amount>
+        <article>
+            <title>Продукты</title>
+        </article>
+        <date>2019-03-27T16:00:38.803+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </account>
+        <amount>-245.0</amount>
+        <article>
+            <title>Продукты</title>
+        </article>
+        <date>2019-03-26T06:23:32.871+06:00</date>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </account>
+        <amount>-396.0</amount>
+        <article>
+            <title>Продукты</title>
+        </article>
+        <date>2019-03-25T08:51:30.775+06:00</date>
     </transactions>
     <transfer>
         <date>2019-03-28T19:58:19.179+06:00</date>
