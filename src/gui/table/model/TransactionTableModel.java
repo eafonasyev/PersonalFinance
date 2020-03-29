@@ -19,11 +19,11 @@ public class TransactionTableModel extends  MainTableModel {
     private final int NOUTE = 4;
     public TransactionTableModel(String[] column) {
         super(SaveData.getInstance().getFilterTransaction());
-        this.column = new ArrayList(Arrays.asList(column));
+        this.columns = new ArrayList(Arrays.asList(column));
     }
     public TransactionTableModel(String[] column,int count) {
         super(SaveData.getInstance().transactionsCount(count));
-        this.column = new ArrayList(Arrays.asList(column));
+        this.columns = new ArrayList(Arrays.asList(column));
         this.count = count;
     }
 

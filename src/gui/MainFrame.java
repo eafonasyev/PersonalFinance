@@ -2,6 +2,7 @@ package gui;
 
 import gui.panel.LeftPanel;
 import gui.panel.OverviewPanel;
+import gui.panel.RightPanel;
 import menu.MainMenu;
 import settings.Style;
 import settings.Text;
@@ -16,6 +17,7 @@ public class MainFrame extends JFrame implements Refresh {
     private final MainMenu  mb;
     private MainToolBar tb;
     private LeftPanel leftPanel;
+    private RightPanel rightPanel;
     public MainFrame(){
         super(Text.get("PROGRAM_NAME"));
         setResizable(false);
@@ -40,19 +42,39 @@ public class MainFrame extends JFrame implements Refresh {
 
         leftPanel = new LeftPanel(this);
         add(leftPanel,constraints);
-        
+
+        setRightPanel(new OverviewPanel(this));
+
         pack();
-        setLocationRelativeTo(this);
+
+
+    }
+
+    public void setRightPanel(RightPanel panel) {
+
+        if (rightPanel != null) remove(rightPanel);
+
+        constraints.gridy = 1;
+        constraints.gridx = 1;
+        rightPanel = panel;
+        rightPanel.setBorder(Style.BORDER_DIALOG);
+        add(rightPanel, constraints);
+        pack();
     }
 
     @Override
     public void refresh() {
-       SwingUtilities.updateComponentTreeUI(this);
-       pack();
-       mb.refresh();
-       leftPanel.refresh();
+        SwingUtilities.updateComponentTreeUI(this);
+        tb.refresh();
+        leftPanel.refresh();
+        rightPanel.refresh();
+        pack();
     }
     public MainMenu getMb() {
         return mb;
     }
+    public RightPanel getRightPanel() {
+        return rightPanel;
+    }
+
 }

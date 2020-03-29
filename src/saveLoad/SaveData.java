@@ -133,21 +133,21 @@ public class SaveData extends Common{
             if(c.getOn()) list.add(c);
         return list;
     }
-    public ArrayList<Transaction> getFilterTransaction(){
+    public List<Transaction> getFilterTransaction(){
         ArrayList<Transaction> list = new ArrayList<Transaction>();
         for(Transaction tr : transactions){
             if(filter.checkDate(tr.getDate())) list.add(tr);
         }
         return list;
     }
-    public ArrayList<Transfer> getFilterTransfers(){
+    public List<Transfer> getFilterTransfers(){
         ArrayList<Transfer> list = new ArrayList<Transfer>();
         for(Transfer tr : transfers){
             if(filter.checkDate(tr.getDate())) list.add(tr);
         }
         return list;
     }
-    public ArrayList<Transaction> transactionsCount(int count){
+    public List<Transaction> transactionsCount(int count){
         return new ArrayList(transactions.subList(0,Math.min(count,transactions.size())));
     }
    public void add (Common c) throws ModelException{

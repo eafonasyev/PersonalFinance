@@ -26,7 +26,7 @@ public class Settings {
 
     public static final int COUNT_OVERVIEW_ROWS = 10;
 
-    public static final String[] CURRENCY_CODES = new String[]{"RUB","USA","KZT","EUR","FRK"};
+    public static final String[] CURRENCY_CODES = new String[]{"RUB","USA","KZT","EUR","FRK","CNY"};
 
     public  static final File FILE_SETTINGS =  new File("saves/settings.ini");
     public  static  File FILE_SAVES = new File("saves/default.myrus");

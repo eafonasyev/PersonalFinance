@@ -11,58 +11,64 @@ import toolbar.AbstractToolBar;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 
-public class RightPanel extends AbstractPanel {
+abstract public class RightPanel extends AbstractPanel {
 
-    protected TableData tb;
+    protected TableData td;
+
     private String title;
     private ImageIcon icon;
     private JPanel[] panels;
 
-    public RightPanel(MainFrame frame, TableData tb, String title, ImageIcon icon, JPanel[] panel) {
+    public RightPanel(MainFrame frame, TableData td, String title, ImageIcon icon, JPanel[] panels) {
         super(frame);
+        this.td = td;
         this.title = title;
         this.icon = icon;
-        this.panels = panel;
-        this.tb = tb;
+        this.panels = panels;
+        init();
     }
 
-    public RightPanel(MainFrame frame, TableData tb, String title, ImageIcon icon, AbstractToolBar pn) {
-        this(frame, tb, title, icon, new JPanel[]{pn});
-
+    public RightPanel(MainFrame frame, TableData td, String title, ImageIcon icon, AbstractToolBar tb) {
+        this(frame, td, title, icon, new JPanel[]{tb});
     }
 
-    public RightPanel(MainFrame frame, TableData tb, String title, ImageIcon icon) {
-        this(frame, tb, title, icon, new JPanel[]{});
+    public RightPanel(MainFrame frame, TableData td, String title, ImageIcon icon) {
+        this(frame, td, title, icon, new JPanel[]{});
+    }
 
+    protected void setPanels(JPanel[] panels) {
+        this.panels = panels;
     }
 
     @Override
     public void refresh() {
         super.refresh();
-        if (tb != null) tb.refresh();
+        if (td != null) td.refresh();
         for (JPanel panel : panels) {
             if (panel instanceof Refresh) ((Refresh) panel).refresh();
         }
     }
 
-    public void enableEditDelete() {
-        super.refresh();
+    private void enableEditDelete() {
         for (JPanel panel : panels) {
             if (panel instanceof EnableEditDelete) ((EnableEditDelete) panel).setEnableEditDelete(false);
         }
         frame.getMb().setEnableEditDelete(false);
-        if (tb != null)
-            if (tb.getSelectedRow() != -1) {
+
+        if (td != null) {
+            if (td.getSelectedRow() != -1) {
                 for (JPanel panel : panels) {
                     if (panel instanceof EnableEditDelete) ((EnableEditDelete) panel).setEnableEditDelete(true);
-                    frame.getMb().setEnableEditDelete(true);
                 }
+                frame.getMb().setEnableEditDelete(true);
             }
+        }
     }
 
     @Override
-    protected void init() {
+    protected final void init() {
         enableEditDelete();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         JLabel header = new JLabel(Text.get(title));
@@ -71,25 +77,30 @@ public class RightPanel extends AbstractPanel {
         header.setAlignmentX(JLabel.CENTER_ALIGNMENT);
         add(header);
 
-        if (panels.length==0) add(Box.createHorizontalStrut(Style.PUDDING_EMPTY));
+        if (panels.length == 0) add(Box.createVerticalStrut(Style.PUDDING_DIALOG));
 
         for (JPanel panel : panels) {
             add(panel);
-            add(Box.createHorizontalStrut(Style.PUDDING_BALLANCE));
+            add(Box.createVerticalStrut(Style.PUDDING_DIALOG));
         }
-      if(tb!=null){
-            JScrollPane scroll = new JScrollPane(tb);
+
+        if (td != null) {
+            JScrollPane scroll = new JScrollPane(td);
             add(scroll);
-            scroll.setVerticalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-            ListSelectionModel model = tb.getSelectionModel();
-            model.addListSelectionListener(new ListSelectionListener() {
+            scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+            ListSelectionModel selectionModel = td.getSelectionModel();
+            selectionModel.addListSelectionListener(new ListSelectionListener() {
                 @Override
-                public void valueChanged(ListSelectionEvent e) {
+                public void valueChanged(ListSelectionEvent lse) {
                     enableEditDelete();
                 }
             });
-      }
+        }
+
     }
 
+    public TableData getTableData() {
+        return td;
+    }
 
 }
