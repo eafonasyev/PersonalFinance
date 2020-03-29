@@ -1,9 +1,6 @@
 package gui;
 
-import gui.panel.AccountPanel;
-import gui.panel.LeftPanel;
-import gui.panel.OverviewPanel;
-import gui.panel.RightPanel;
+import gui.panel.*;
 import menu.MainMenu;
 import settings.Style;
 import settings.Text;
@@ -44,7 +41,7 @@ public class MainFrame extends JFrame implements Refresh {
         leftPanel = new LeftPanel(this);
         add(leftPanel,constraints);
 
-        setRightPanel(new AccountPanel(this));
+        setRightPanel(new ArticlePanel(this));
 
         pack();
 
