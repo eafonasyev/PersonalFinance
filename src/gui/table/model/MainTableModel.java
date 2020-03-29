@@ -6,14 +6,21 @@ import settings.Text;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 abstract public class MainTableModel extends AbstractTableModel implements Refresh {
-    protected List<? extends Common> data;
-    protected List<String> column = new ArrayList<>();
 
-    public MainTableModel(List<? extends Common> data) {
+    protected List<? extends Common> data;
+    protected List<String> columns = new ArrayList();
+
+    public MainTableModel(List data, String[] columns) {
         this.data = data;
+        this.columns = new ArrayList(Arrays.asList(columns));
+    }
+    public MainTableModel(List data) {
+        this.data = data;
+        this.columns = new ArrayList(Arrays.asList(columns));
     }
 
     @Override
@@ -23,24 +30,32 @@ abstract public class MainTableModel extends AbstractTableModel implements Refre
 
     @Override
     public int getColumnCount() {
-        return column.size();
+        return columns.size();
     }
 
     @Override
-    public String getColumnName(int column) {
-        return Text.get(this.column.get(column));
+    public String getColumnName(int columnIndex) {
+        return Text.get(columns.get(columnIndex));
     }
 
     @Override
     public Class<?> getColumnClass(int columnIndex) {
-        Object obj = getValueAt(0,columnIndex);
+        Object obj = getValueAt(0, columnIndex);
+        if (obj == null) return Object.class;
         return obj.getClass();
     }
-    public void refresh(){
+
+    @Override
+    public void refresh() {
         updateData();
         fireTableStructureChanged();
         fireTableDataChanged();
     }
 
-    protected abstract void updateData();
+    public Common getCommonByRow(int row) {
+        return data.get(row);
+    }
+
+    abstract protected void updateData();
+
 }

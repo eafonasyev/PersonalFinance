@@ -118,7 +118,6 @@ final  public  class Text {
          data.put("LABEL_ON","Включена");
          data.put("LABEL_BASE","Базовая");
          data.put("LABEL_RATE","Индекс");
-
          data.put("ERROR","Ошибка");
          data.put("DIALOG_ABOUT","О проограмме");
          data.put("ABOUT","<bode>"
@@ -127,7 +126,14 @@ final  public  class Text {
                  +"</body>");
          data.put("BALANCE_CURRENCIES",  "Баланс по всем валютам:   ");
          data.put("BALANCE_CURRENCIES_B","Итоговая сумма по валютам:");
+
+         data.put("DATA","Дата");
+         data.put("ACCOUNT","Счета");
+         data.put("ARTICLES","Статьи");
+         data.put("AMOUNT","Сумма");
+         data.put("NOTICE","Примечания");
          data.put("LAST_TRANSACTIONS","Последнии транзакции");
+
 
      }
 }
