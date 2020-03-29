@@ -18,7 +18,7 @@
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>77.793</rate>
+            <rate>78.722</rate>
             <title>Доллар</title>
         </currency>
         <startAmount>3000.0</startAmount>
@@ -30,7 +30,7 @@
             <base>false</base>
             <code>USD</code>
             <on>true</on>
-            <rate>77.793</rate>
+            <rate>78.722</rate>
             <title>Доллар</title>
         </currency>
         <startAmount>3000.0</startAmount>
@@ -62,21 +62,21 @@
         <base>true</base>
         <code>KZT</code>
         <on>true</on>
-        <rate>0.174</rate>
+        <rate>0.176</rate>
         <title>Тенге</title>
     </currency>
     <currency>
         <base>false</base>
         <code>EUR</code>
         <on>false</on>
-        <rate>84.149</rate>
+        <rate>85.965</rate>
         <title>Евро</title>
     </currency>
     <currency>
         <base>false</base>
         <code>USD</code>
         <on>true</on>
-        <rate>77.793</rate>
+        <rate>78.722</rate>
         <title>Доллар</title>
     </currency>
     <transactions>
