@@ -46,7 +46,7 @@ public class Account extends Common{
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public  void setCurrency(Currency currency) {
         this.currency = currency;
     }
 

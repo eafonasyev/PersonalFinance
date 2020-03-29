@@ -77,17 +77,18 @@ abstract public class RightPanel extends AbstractPanel {
         header.setAlignmentX(JLabel.CENTER_ALIGNMENT);
         add(header);
 
-        if (panels.length == 0) add(Box.createVerticalStrut(Style.PUDDING_DIALOG));
+        if (panels.length == 0) add(Box.createVerticalStrut(Style.PUDDING_BALLANCE));
 
         for (JPanel panel : panels) {
             add(panel);
-            add(Box.createVerticalStrut(Style.PUDDING_DIALOG));
+            add(Box.createVerticalStrut(Style.PUDDING_BALLANCE));
         }
 
         if (td != null) {
             JScrollPane scroll = new JScrollPane(td);
-            add(scroll);
+
             scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+            add(scroll);
             ListSelectionModel selectionModel = td.getSelectionModel();
             selectionModel.addListSelectionListener(new ListSelectionListener() {
                 @Override

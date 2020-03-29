@@ -3,15 +3,15 @@ package settings;
 import objects.Filter;
 
 import java.text.SimpleDateFormat;
-import java.util.Currency;
+import objects.Currency;
 import java.util.Date;
 
 public class Format {
     public static  String amount(double amount){
         return String.format(Settings.FORMAT_AMOUNT,amount);
     }
-    public String amount(double amount, Currency currency){
-        return amount(amount)+" "+currency.getCurrencyCode();
+    public static String amount(double amount, Currency currency){
+        return amount(amount)+" "+currency.getCode();
     }
     public static String rate(double rate){
         return String.format(Settings.FORMAT_RATE,rate);
@@ -19,7 +19,7 @@ public class Format {
     }
 
     public static String rate(double rate, Currency currency){
-        return rate(rate)+" "+currency.getCurrencyCode();
+        return rate(rate)+" "+currency.getCode();
 
     }
     public static String date(Date date){

@@ -50,19 +50,18 @@ public class LeftPanel extends AbstractPanel {
     private void addBalanceCurrency() {
         for(Currency currency : SaveData.getInstance().getCurrencies()) {
             add(Box.createVerticalStrut(Style.PUDDING_BALLANCE));
-         //   add(new PanelBalanceCurrency(currency, Statistics.getBalance(currency)));
-           add(new PanelBalanceCurrency(currency, Statistics.getBalanceCurrency(currency)));
+            add(new PanelBalanceCurrency(currency, Statistics.getBalanceCurrency(currency)));
         }
     }
     private class PanelBalanceCurrency extends JPanel{
         public PanelBalanceCurrency(Currency currency ,Double amount) {
             super();
             setLayout(new BorderLayout());
-            setBackground(Color.lightGray);
+            setBackground(Color.WHITE);
             setBorder(Style.LEFT_PANEL_BORDER);
 
             JLabel currencyLaybel = new JLabel(currency.getTitle());
-            JLabel amountLaybel = new JLabel(Format.amount(amount));
+            JLabel amountLaybel = new JLabel(Format.amount(amount,currency));
 
             currencyLaybel.setFont(Style.FONT_PANEL_LEFT);
             amountLaybel.setFont(Style.FONT_PANEL_LEFT);

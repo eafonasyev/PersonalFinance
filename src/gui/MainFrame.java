@@ -1,5 +1,6 @@
 package gui;
 
+import gui.panel.AccountPanel;
 import gui.panel.LeftPanel;
 import gui.panel.OverviewPanel;
 import gui.panel.RightPanel;
@@ -43,7 +44,7 @@ public class MainFrame extends JFrame implements Refresh {
         leftPanel = new LeftPanel(this);
         add(leftPanel,constraints);
 
-        setRightPanel(new OverviewPanel(this));
+        setRightPanel(new AccountPanel(this));
 
         pack();
 
@@ -59,6 +60,7 @@ public class MainFrame extends JFrame implements Refresh {
         rightPanel = panel;
         rightPanel.setBorder(Style.BORDER_DIALOG);
         add(rightPanel, constraints);
+
         pack();
     }
 

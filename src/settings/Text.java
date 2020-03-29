@@ -90,7 +90,7 @@ final  public  class Text {
          data.put("TOOLBAR_OVERVIEW","Вид");
 
          data.put("ADD","Добавить");
-         data.put("EDIT","Рудактировать");
+         data.put("EDIT","Редактировать");
          data.put("DELETE","Удалить");
          data.put("CANCEL","Отмена");
 
@@ -127,8 +127,8 @@ final  public  class Text {
          data.put("BALANCE_CURRENCIES",  "Баланс по всем валютам:   ");
          data.put("BALANCE_CURRENCIES_B","Итоговая сумма по валютам:");
 
-         data.put("DATA","Дата");
-         data.put("ACCOUNT","Счета");
+         data.put("DATE","Дата");
+         data.put("ACCOUNTS","Счета");
          data.put("ARTICLES","Статьи");
          data.put("AMOUNT","Сумма");
          data.put("NOTICE","Примечания");

@@ -24,7 +24,7 @@ public class Settings {
     public static final String MONTH_YEAR = "yyyy";
     public static final String SAVE_FORMANT_FILE= ".myrus";
 
-    public static final int COUNT_OVERVIEW_ROWS = 10;
+    public static final int COUNT_OVERVIEW_ROWS = 15;
 
     public static final String[] CURRENCY_CODES = new String[]{"RUB","USA","KZT","EUR","FRK","CNY"};
 
