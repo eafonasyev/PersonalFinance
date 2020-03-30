@@ -8,6 +8,10 @@ import java.awt.*;
 public class Style {
 
     public static final Color COLOR_BOTTON_HOVER = Color.green;
+    public static final Color COLOR_AMOUNT_NEGATIVE = Color.RED;
+    public static final Color COLOR_AMOUNT_POSITIVE = Color.green;
+    public static final Color COLOR_BOTTON_NORMAL = new Color(240, 240, 240, 240);
+
     public static final Font FONT_BOTTON_TOOLBAR = new Font("Roboto-ligth", Font.BOLD, 14);
     public static final Font FONT_BOTTON_MAIN = new Font("Roboto-ligth", Font.BOLD, 14);
     public static final Font FONT_PANEL_LEFT = new Font("Roboto-ligth", Font.BOLD, 12);
@@ -17,14 +21,11 @@ public class Style {
     public static final int PUDDING_EMPTY = 0;
     public static final int PUDDING_DIALOG = 10;
 
-    public static final Color COLOR_BOTTON_NORMAL = new Color(240, 240, 240, 240);
     public static final EmptyBorder EMPTY_BORDER = new EmptyBorder(10, 10, 10, 10);
     public static final EmptyBorder LEFT_PANEL_BORDER = new EmptyBorder(5, 5, 5, 5);
     public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
     public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(700,400);
     public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
-    public static final Color COLOR_AMOUNT_NEGATIVE = Color.RED;
-    public static final Color COLOR_AMOUNT_POSITIVE = Color.green;
     public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");
@@ -35,17 +36,14 @@ public class Style {
     public static final ImageIcon ICON_TOOLBAR_ACCOUNTS = new ImageIcon("image/icon_toolbar_accounts.png");
     public static final ImageIcon ICON_TOOLBAR_CURRENCIES = new ImageIcon("image/icon_toolbar_currencies.png");
     public static final ImageIcon ICON_TOOLBAR_HELP = new ImageIcon("image/ICON_TOOLBAR_HELP.png");
-
     public static final ImageIcon ICON_MENU_FILE = new ImageIcon("image/icon_menu_file.png");
     public static final ImageIcon ICON_MENU_EDIT = new ImageIcon("image/ICON_MENU_EDIT.png");
     public static final ImageIcon ICON_MENU_VIEW = new ImageIcon("image/ICON_MENU_VIEW.png");
     public static final ImageIcon ICON_MENU_HELP = new ImageIcon("image/ICON_MENU_HELP.png");
     public static final ImageIcon ICON_CANCEL = new ImageIcon("image/ICON_CANCEL.png");
-
     public static final ImageIcon ICON_ACCOUNT_LABEL = new ImageIcon("image/ICON_TITLE_ACCOUNT.png");
     public static final ImageIcon ICON_START_AMOUNT = new ImageIcon("image/ICON_START_AMOUNT.png");
     public static final ImageIcon ICON_CURRENCIES = new ImageIcon("image/ICON_CURRENCIES.png");
-
     public static final ImageIcon ICON_MENU_FILE_NEW = new ImageIcon("image/ICON_MENU_FILE_NEW.png");
     public static final ImageIcon ICON_MENU_FILE_OPEN = new ImageIcon("image/ICON_MENU_FILE_OPEN.png");
     public static final ImageIcon ICON_MENU_FILE_SAVE = new ImageIcon("image/ICON_MENU_FILE_SAVE.png");
@@ -70,12 +68,15 @@ public class Style {
     public static final ImageIcon ICON_ACCOUNTS = new ImageIcon("image/ICON_MENU_VIEW_ACCOUNTS.png");
     public static final ImageIcon ICON_AMOUNT = new ImageIcon("image/ICON_AMOUNT.png");
     public static final ImageIcon ICON_NOTE = new ImageIcon("image/ICON_NOTE.png");
-
     public static final ImageIcon ICON_CODE = new ImageIcon("image/ICON_CODE.png");
     public static final ImageIcon ICON_ON = new ImageIcon("image/ICON_ON.png");
     public static final ImageIcon ICON_BASE = new ImageIcon("image/ICON_BASE.png");
     public static final ImageIcon ICON_RATE = new ImageIcon("image/ICON_RATE.png");
 
+    public static final ImageIcon ICON_FROM_ACCOUNT = new ImageIcon("image/ICON_FROM_ACCOUNT.png");
+    public static final ImageIcon ICON_TO_ACCOUNT = new ImageIcon("image/ICON_TO_ACCOUNT.png");
+    public static final ImageIcon ICON_FROM_AMOUNT = new ImageIcon("image/ICON_FROM_AMOUNT.png");
+    public static final ImageIcon ICON_TO_AMOUNT = new ImageIcon("image/ICON_TO_AMOUNT.png");
 
 
 }

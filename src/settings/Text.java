@@ -133,6 +133,12 @@ final  public  class Text {
          data.put("AMOUNT","Сумма");
          data.put("NOTICE","Примечания");
          data.put("LAST_TRANSACTIONS","Последнии транзакции");
+         data.put("TRANSACTIONS","Транзакции");
+         data.put("FROM_ACCOUNT","С счета");
+         data.put("TO_ACCOUNT","На счет");
+         data.put("FROM_AMOUNT","С суммы");
+         data.put("TO_AMOUNT","На сумму");
+         data.put("TRANSFER","Переводы");
 
 
      }

@@ -14,9 +14,10 @@ public class Filter {
     private Date from;
 
     public Filter() {
-        this(STEP_MONTH);
+        this(STEP_YEAR);
     }
     public Filter(int step){
+        this.step = step;
         setFromTo( new GregorianCalendar());
     }
 
@@ -98,6 +99,8 @@ public class Filter {
         }
 
         public boolean checkDate(Date date){
+            System.out.println(from);
+            System.out.println(to);
         return date.compareTo(from)>0 && date.compareTo(to)<0;
         }
 

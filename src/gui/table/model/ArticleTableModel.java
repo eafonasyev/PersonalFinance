@@ -10,6 +10,7 @@ public class ArticleTableModel extends  MainTableModel {
     public ArticleTableModel(String[] column) {
         super(SaveData.getInstance().getArticles(),column);
     }
+
     public ArticleTableModel(String[] column, int count) {
         super(SaveData.getInstance().getArticles(),column);
 

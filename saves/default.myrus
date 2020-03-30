@@ -134,7 +134,7 @@
         <article>
             <title>Зарплата</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -153,7 +153,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -172,7 +172,7 @@
         <article>
             <title>ЖКХ</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-30T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -191,7 +191,7 @@
         <article>
             <title>ЖКХ</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -210,7 +210,7 @@
         <article>
             <title>Проценты по депозиту</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -229,7 +229,7 @@
         <article>
             <title>Столовая</title>
         </article>
-        <date>2019-03-28T08:26:32.799+06:00</date>
+        <date>2020-03-28T08:26:32.799+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -248,7 +248,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-27T19:58:29.464+06:00</date>
+        <date>2020-03-27T19:58:29.464+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -267,7 +267,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-27T16:00:38.803+06:00</date>
+        <date>2020-03-27T16:00:38.803+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -286,7 +286,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-26T06:23:32.871+06:00</date>
+        <date>2020-03-26T06:23:32.871+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -305,7 +305,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-25T08:51:30.775+06:00</date>
+        <date>2020-03-25T08:51:30.775+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -324,7 +324,7 @@
         <article>
             <title>Зарплата</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -343,7 +343,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -362,7 +362,7 @@
         <article>
             <title>ЖКХ</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -381,7 +381,7 @@
         <article>
             <title>ЖКХ</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -400,7 +400,7 @@
         <article>
             <title>Проценты по депозиту</title>
         </article>
-        <date>2019-03-28T19:58:19.178+06:00</date>
+        <date>2020-03-28T19:58:19.178+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -419,7 +419,7 @@
         <article>
             <title>Столовая</title>
         </article>
-        <date>2019-03-28T08:26:32.799+06:00</date>
+        <date>2020-03-28T08:26:32.799+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -438,7 +438,7 @@
         <article>
             <title>Продукты</title>
         </article>
-        <date>2019-03-27T19:58:29.464+06:00</date>
+        <date>2020-03-27T19:58:29.464+06:00</date>
     </transactions>
     <transactions>
         <account>
@@ -499,6 +499,122 @@
     </transactions>
     <transfer>
         <date>2019-03-28T19:58:19.179+06:00</date>
+        <fromAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </fromAccount>
+        <fromAmount>25000.0</fromAmount>
+        <toAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </toAccount>
+        <toAmount>25000.0</toAmount>
+    </transfer>
+    <transfer>
+        <date>2019-03-28T19:58:19.179+06:00</date>
+        <fromAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </fromAccount>
+        <fromAmount>25000.0</fromAmount>
+        <toAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </toAccount>
+        <toAmount>25000.0</toAmount>
+    </transfer>
+    <transfer>
+        <date>2020-03-28T19:58:19.179+06:00</date>
+        <fromAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </fromAccount>
+        <fromAmount>25000.0</fromAmount>
+        <toAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </toAccount>
+        <toAmount>25000.0</toAmount>
+    </transfer>
+    <transfer>
+        <date>2020-03-28T19:58:19.179+06:00</date>
+        <fromAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>Карта Visa</title>
+        </fromAccount>
+        <fromAmount>25000.0</fromAmount>
+        <toAccount>
+            <amount>0.0</amount>
+            <currency>
+                <base>true</base>
+                <code>RUB</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </toAccount>
+        <toAmount>25000.0</toAmount>
+    </transfer>
+    <transfer>
+        <date>2020-03-28T19:58:19.179+06:00</date>
         <fromAccount>
             <amount>0.0</amount>
             <currency>
