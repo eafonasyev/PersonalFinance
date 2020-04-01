@@ -2,6 +2,7 @@ package settings;
 
  public final class HundlerCode {
      public static  final String MENU_FILE_NEW = "MENU_FILE_NEW";
+     public static  final String PERIOD = "MENU_FILE_NEW";
      public static  final String MENU_FILE_OPEN = "MENU_FILE_OPEN";
      public static  final String MENU_FILE_CLOSE = "MENU_FILE_CLOSE";
      public static  final String MENU_FILE_SAVE = "MENU_FILE_SAVE";
@@ -32,7 +33,7 @@ package settings;
      public static  final String UPDATE = "UPDATE";
      public static  final String CANCEL = "CANCEL";
      public static  final String RIGTH = "RIGTH";
-     public static  final String LEFR = "LEFR";
+     public static  final String LEFT = "LEFT";
      public static  final String TYPE = "TYPE";
      public static  final String STEP = "STEP";
 

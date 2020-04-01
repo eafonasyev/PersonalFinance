@@ -48,12 +48,11 @@ public class Format {
         Date time = filter.getTo();
         switch (filter.getStep()){
             case Filter.STEP_DAY:
-                date(time);
+                return date(time);
             case Filter.STEP_MONTH:
-                monthFormat(time);
+                return monthFormat(time);
             case Filter.STEP_YEAR:
-                yearFormat(time);
-
+                return yearFormat(time);
         }
         return null;
     }

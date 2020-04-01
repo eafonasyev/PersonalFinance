@@ -28,6 +28,7 @@ public class Style {
     public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
     public static final Color COLOR_CURRENCY_OFF = Color.LIGHT_GRAY;
     public static final Color COLOR_CURRENCY_ON = Color.GRAY;
+    public static final int WIDTH_FILTER_BUTON = 200;
     public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");
@@ -79,6 +80,8 @@ public class Style {
     public static final ImageIcon ICON_TO_ACCOUNT = new ImageIcon("image/ICON_TO_ACCOUNT.png");
     public static final ImageIcon ICON_FROM_AMOUNT = new ImageIcon("image/ICON_FROM_AMOUNT.png");
     public static final ImageIcon ICON_TO_AMOUNT = new ImageIcon("image/ICON_TO_AMOUNT.png");
+    public static final ImageIcon ICON_LEFT = new ImageIcon("image/ICON_LEFT.png");
+    public static final ImageIcon ICON_RIGHT = new ImageIcon("image/ICON_RIGHT.png");
 
 
 }

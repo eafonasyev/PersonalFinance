@@ -192,4 +192,7 @@ public class SaveData extends Common{
         }
     }
 
+    public Filter getFilter() {
+        return filter;
+    }
 }
