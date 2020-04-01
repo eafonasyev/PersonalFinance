@@ -28,7 +28,7 @@ public class FilterPanel extends AbstractPanel {
         MainButton periodButton = new MainButton(Format.getTitleFilter(SaveData.getInstance().getFilter()),null,HundlerCode.STEP);
         MainButton rightButton = new MainButton(Style.ICON_RIGHT,null,HundlerCode.RIGTH);
 
-        setBorder(Style.BORDER_DIALOG);
+        setBorder(Style.LEFT_PANEL_BORDER);
 
         periodButton.setFont(Style.FONT_PANEL_LEFT);
         periodButton.setPreferredSize(new Dimension(Style.WIDTH_FILTER_BUTON,leftButton.getPreferredSize().height));

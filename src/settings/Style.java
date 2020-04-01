@@ -25,6 +25,7 @@ public class Style {
     public static final EmptyBorder LEFT_PANEL_BORDER = new EmptyBorder(5, 5, 5, 5);
     public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
     public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(700,400);
+    public static final Dimension DIMENTION_CHART = new Dimension(700,400);
     public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
     public static final Color COLOR_CURRENCY_OFF = Color.LIGHT_GRAY;
     public static final Color COLOR_CURRENCY_ON = Color.GRAY;
