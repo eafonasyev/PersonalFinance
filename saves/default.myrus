@@ -59,7 +59,7 @@
         <title>Рубль</title>
     </currency>
     <currency>
-        <base>true</base>
+        <base>false</base>
         <code>KZT</code>
         <on>true</on>
         <rate>0.174</rate>

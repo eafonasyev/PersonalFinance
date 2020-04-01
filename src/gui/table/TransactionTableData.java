@@ -21,7 +21,7 @@ public class TransactionTableData extends TableData {
         init();
     }
 
-    private void init() {
+    protected void init() {
         getColumn(Text.get("AMOUNT")).setCellRenderer(new TableCellAmountRendered());
 
     }

@@ -95,7 +95,7 @@ final  public  class Text {
          data.put("CANCEL","Отмена");
 
          data.put("YES","Да");
-         data.put("NO","нет");
+         data.put("NO","Нет");
          data.put("OPEN_BUTTON_TEXT","Открыть");
          data.put("SAVE_BUTTON_TEXT","Сохранить");
          data.put("CANCEL_BUTTON_TEXT","Отменить");
@@ -139,6 +139,13 @@ final  public  class Text {
          data.put("FROM_AMOUNT","С суммы");
          data.put("TO_AMOUNT","На сумму");
          data.put("TRANSFER","Переводы");
+         data.put("CURRENCY","Валюты");
+         data.put("TITLE_CURRENCY","Валюты");
+         data.put("CODE","Код валюты");
+         data.put("RATE","индех валюты");
+         data.put("ON","Включена");
+         data.put("BASE","Базовая");
+
 
 
      }
