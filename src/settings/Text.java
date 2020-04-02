@@ -145,7 +145,9 @@ final  public  class Text {
          data.put("RATE","индех валюты");
          data.put("ON","Включена");
          data.put("BASE","Базовая");
-
+         data.put("CHART_INCOME","Доходы по статьям");
+         data.put("CHART_EXP","Доходы по статьям");
+         data.put("STATISTICS","Статистика");
 
 
      }

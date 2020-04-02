@@ -25,11 +25,14 @@ public class Statistics {
     private static double round(double value){
         return (double) Math.round(value*100)/100;
     }
+
     public static HashMap<String,Double> getDataForChartIncomeArticles(){
+
         return   getDataForChartOnArticles(true);
     }
 
     public static HashMap<String,Double> getDataForChartExpArticles(){
+
         return   getDataForChartOnArticles(false);
     }
 

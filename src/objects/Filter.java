@@ -14,7 +14,7 @@ public class Filter {
     private Date from;
 
     public Filter() {
-        this(STEP_MONTH);
+        this(STEP_YEAR);
 
     }
     public Filter(int step){

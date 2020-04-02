@@ -76,6 +76,7 @@ public class Style {
     public static final ImageIcon ICON_ON = new ImageIcon("image/ICON_ON.png");
     public static final ImageIcon ICON_BASE = new ImageIcon("image/ICON_BASE.png");
     public static final ImageIcon ICON_RATE = new ImageIcon("image/ICON_RATE.png");
+    public static final ImageIcon ICON_STATISTICS  = new ImageIcon("image/ICON_RATE.png");
 
     public static final ImageIcon ICON_FROM_ACCOUNT = new ImageIcon("image/ICON_FROM_ACCOUNT.png");
     public static final ImageIcon ICON_TO_ACCOUNT = new ImageIcon("image/ICON_TO_ACCOUNT.png");
