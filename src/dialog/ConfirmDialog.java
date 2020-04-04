@@ -9,7 +9,7 @@ import javax.swing.*;
 public class ConfirmDialog {
     public static int  show(MainFrame frame,String text,String tittle){
         String[] options = new String[]{Text.get("YES"),Text.get("NO")};
-        int result = JOptionPane.showOptionDialog(frame,text,tittle,JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,Style.ICON_INFO,options,options[1]);
+        int result = JOptionPane.showOptionDialog(frame,Text.get(text),Text.get(tittle),JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,Style.ICON_INFO,options,options[1]);
         return result;
     }
 }

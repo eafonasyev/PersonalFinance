@@ -18,12 +18,12 @@ public class TransactionEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected void init() {
+    protected void init()  {
         component.put("LABEL_DATE",new MainDatePicker().getDatePicker());
         component.put("LABEL_ARTICLES",new CommonComboBox(SaveData.getInstance().getArticles().toArray()));
         component.put("LABEL_ACCOUNTS",new CommonComboBox(SaveData.getInstance().getAccounts().toArray()));
         component.put("LABEL_AMOUNT",new JTextField());
-        component.put("LABEL_Note",new JTextField());
+        component.put("LABEL_NOTE",new JTextField());
 
         icon.put("LABEL_DATE",Style.ICON_DATE);
         icon.put("LABEL_ARTICLES",Style.ICON_ARTICLES);
@@ -33,6 +33,8 @@ public class TransactionEditDialog extends AddEditDialog {
 
         values.put("LABEL_DATE", new Date());
         values.put("LABEL_AMOUNT",Format.amount(0));
+        values();
+
     }
 
     @Override

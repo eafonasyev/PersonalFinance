@@ -1,4 +1,5 @@
 package gui.table;
+import gui.hundler.FunctionHundler;
 import gui.table.model.ArticleTableModel;
 import settings.Style;
 
@@ -8,8 +9,8 @@ public class ArticleTableData extends TableData {
     private static final String[] columns = new String[]{"ARTICLES"};
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_ARTICLES};
 
-    public ArticleTableData() {
-        super(new ArticleTableModel(columns),columns,icons);
+    public ArticleTableData(FunctionHundler hundler) {
+        super(new ArticleTableModel(columns),hundler,columns,icons);
 
     }
 

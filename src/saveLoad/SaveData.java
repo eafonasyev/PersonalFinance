@@ -87,7 +87,7 @@ public class SaveData extends Common{
     }
 
     public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
+        if(accounts!=null)this.accounts = accounts;
     }
 
     public List<Currency> getCurrencies() {
@@ -95,7 +95,7 @@ public class SaveData extends Common{
     }
 
     public void setCurrencies(List<Currency> currencies) {
-        this.currencies = currencies;
+        if(currencies!=null)this.currencies = currencies;
     }
 
     public List<Article> getArticles() {
@@ -103,7 +103,7 @@ public class SaveData extends Common{
     }
 
     public void setArticles(List<Article> articles) {
-        this.articles = articles;
+        if(articles!=null) this.articles = articles;
     }
 
     public List<Transaction> getTransactions() {
@@ -111,15 +111,16 @@ public class SaveData extends Common{
     }
 
     public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;
+        if(transactions!=null)  this.transactions = transactions;
     }
 
     public List<Transfer> getTransfers() {
         return transfers;
     }
 
-    public void setTransfers(List<Transfer> transfers) {
-        this.transfers = transfers;
+    public void setTransfers(List<Transfer> transfers)
+    {
+        if(transfers!=null) this.transfers = transfers;
     }
     public Currency getBaseCurency(){
         for(Currency c : currencies){
@@ -190,9 +191,17 @@ public class SaveData extends Common{
         for(Account a : accounts){
             a.getCurrency().setRate(rates.get(a.getCurrency().getCode()));
         }
+        saved = false;
     }
 
     public Filter getFilter() {
         return filter;
+    }
+    public void  clear(){
+        transactions.clear();;
+        transfers.clear();
+        articles.clear();
+        accounts.clear();
+        currencies.clear();
     }
 }

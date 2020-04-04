@@ -1,4 +1,5 @@
 package gui.table;
+import gui.hundler.FunctionHundler;
 import gui.table.model.ArticleTableModel;
 import gui.table.model.CurrencyTableModel;
 import gui.table.rendered.MainTableSellRenderer;
@@ -14,8 +15,8 @@ public class CurrencyTableData extends TableData {
     private static final String[] columns = new String[]{"TITLE_CURRENCY","CODE","RATE","ON","BASE"};
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_CURRENCIES,Style.ICON_CODE,Style.ICON_RATE,Style.ICON_ON,Style.ICON_BASE};
 
-    public CurrencyTableData() {
-        super(new CurrencyTableModel(columns),columns,icons);
+    public CurrencyTableData(FunctionHundler hundler) {
+        super(new CurrencyTableModel(columns),hundler,columns,icons);
         init();
     }
 

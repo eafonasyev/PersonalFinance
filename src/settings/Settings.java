@@ -62,7 +62,7 @@ public class Settings {
     private static void save() {
         try {
             Wini wini = new Wini(FILE_SETTINGS);
-            wini.put("settings", "FILE_SAVE", FILE_SAVES.getAbsolutePath().replace("\\", "\\\\"));
+            if(FILE_SAVES != null) wini.put("settings", "FILE_SAVE", FILE_SAVES.getAbsolutePath().replace("\\", "\\\\"));
             wini.store();
         }
         catch (IOException ex){

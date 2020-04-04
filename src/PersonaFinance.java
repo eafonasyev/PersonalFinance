@@ -17,7 +17,6 @@ public class PersonaFinance {
 
         sd.updateCurencies();
         sd.save();
-        System.out.println(sd);
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
 

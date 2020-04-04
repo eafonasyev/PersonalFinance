@@ -100,8 +100,6 @@ public class Filter {
         }
 
         public boolean checkDate(Date date){
-            System.out.println(from);
-            System.out.println(to);
         return date.compareTo(from)>0 && date.compareTo(to)<0;
         }
 

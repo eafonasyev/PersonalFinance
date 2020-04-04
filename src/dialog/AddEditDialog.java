@@ -16,6 +16,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 abstract public class AddEditDialog extends JDialog {
+    public final MainFrame  frame;
     protected LinkedHashMap<String,JComponent> component = new LinkedHashMap<>();
     protected LinkedHashMap<String,ImageIcon>  icon = new LinkedHashMap<>();
     protected LinkedHashMap<String,Object>     values = new LinkedHashMap<>();
@@ -23,6 +24,7 @@ abstract public class AddEditDialog extends JDialog {
 
     public AddEditDialog(MainFrame frame){
         super(frame,Text.get("ADD"),true);
+        this.frame = frame;
         setResizable(true);
 
     }
@@ -66,15 +68,19 @@ abstract public class AddEditDialog extends JDialog {
      getContentPane().removeAll();
      getContentPane().setLayout(new BoxLayout( getContentPane(),BoxLayout.Y_AXIS));
         ((JPanel)getContentPane()).setBorder(Style.BORDER_DIALOG);
+        ((JPanel)getContentPane()).setPreferredSize(Style.DIMENTION_EDIT);
+        System.out.println("ghxjhv");
         for(Map.Entry<String, JComponent> entry : component.entrySet()){
             String key = entry.getKey();
             JLabel label = new JLabel(Text.get(key));
             label.setIcon(icon.get(key));
             label.setFont(Style.FONT_BOTTON_MAIN);
             JComponent component = entry.getValue();
+
             if (component instanceof JTextField){
                 component.setPreferredSize(Style.DIMENTION_DIALOG_TEXFILD_SIZE);
                 if(values.containsKey(key)) ((JTextField)component).setText(""+ values.get(key));
+
             }
             else if (component instanceof  JComboBox){
                 if(values.containsKey(key)){
@@ -107,6 +113,8 @@ abstract public class AddEditDialog extends JDialog {
         pack();
         setLocationRelativeTo(null);
     }
+
+
     protected class CommonComboBox extends JComboBox{
         public CommonComboBox(Object[] obj){
             super(obj);

@@ -30,6 +30,7 @@ public class Style {
     public static final Color COLOR_CURRENCY_OFF = Color.LIGHT_GRAY;
     public static final Color COLOR_CURRENCY_ON = Color.GRAY;
     public static final int WIDTH_FILTER_BUTON = 200;
+    public static final Dimension DIMENTION_EDIT = new Dimension(300,500);
     public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");

@@ -10,7 +10,7 @@ public class MainFileChooser extends JFileChooser {
     private MainFrame frame;
     public MainFileChooser(MainFrame frame){
         this.frame = frame;
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("programm",Settings.SAVE_FORMANT_FILE);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(Text.get("PROGRAMM"),Settings.SAVE_FORMANT_FILE);
         setFileFilter(filter);
         setAcceptAllFileFilterUsed(false);
         setCurrentDirectory(Settings.SAVEDIR);

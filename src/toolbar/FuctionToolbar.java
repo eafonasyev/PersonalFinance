@@ -2,6 +2,7 @@ package toolbar;
 
 import gui.EnableEditDelete;
 import gui.MainButton;
+import gui.hundler.Hundler;
 import settings.HundlerCode;
 import settings.Style;
 import settings.Text;
@@ -10,8 +11,8 @@ public class FuctionToolbar extends AbstractToolBar implements EnableEditDelete 
 
     private MainButton editButtton;
     private MainButton deleteButton;
-    public FuctionToolbar(){
-        super();
+    public FuctionToolbar(Hundler hundler){
+        super(Style.BORDER_DIALOG,hundler);
         init();
     }
     @Override
@@ -23,7 +24,7 @@ public class FuctionToolbar extends AbstractToolBar implements EnableEditDelete 
 
     @Override
     public void setEnableEditDelete(boolean action) {
-        deleteButton.setEnabled(false);
-        editButtton.setEnabled(false);
+        deleteButton.setEnabled(action);
+        editButtton.setEnabled(action);
     }
 }

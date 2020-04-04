@@ -1,4 +1,5 @@
 package gui.table;
+import gui.hundler.FunctionHundler;
 import gui.table.TableData;
 import gui.table.model.TransactionTableModel;
 import gui.table.model.TransferTableModel;
@@ -13,8 +14,8 @@ public class TransferTableData extends TableData {
     private static String[] columns = new String[]{"DATE","FROM_ACCOUNT","TO_ACCOUNT","FROM_AMOUNT","TO_AMOUNT","NOTICE"};
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_DATE,Style.ICON_FROM_ACCOUNT,Style.ICON_TO_ACCOUNT,Style.ICON_FROM_AMOUNT,Style.ICON_TO_AMOUNT,Style.ICON_NOTE};
 
-    public TransferTableData() {
-        super(new TransferTableModel(columns),columns,icons);
+    public TransferTableData(FunctionHundler hundler) {
+        super(new TransferTableModel(columns),hundler,columns,icons);
 
 
     }

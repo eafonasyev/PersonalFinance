@@ -1,8 +1,7 @@
 package settings;
 
- public final class HundlerCode {
+ public final class HundlerCode  {
      public static  final String MENU_FILE_NEW = "MENU_FILE_NEW";
-     public static  final String PERIOD = "MENU_FILE_NEW";
      public static  final String MENU_FILE_OPEN = "MENU_FILE_OPEN";
      public static  final String MENU_FILE_CLOSE = "MENU_FILE_CLOSE";
      public static  final String MENU_FILE_SAVE = "MENU_FILE_SAVE";
@@ -27,6 +26,7 @@ package settings;
      public static  final String TOOLBAR_CURRENCIES = "TOOLBAR_CURRENCIES";
      public static  final String TOOLBAR_STATISTICS = "TOOLBAR_STATISTICS";
      public static  final String TOOLBAR_HELP = "TOOLBAR_HELP";
+     public static  final String PERIOD = "PERIOD";
      public static  final String ADD = "ADD";
      public static  final String DELETE = "DELETE";
      public static  final String EDIT = "EDIT";

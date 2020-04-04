@@ -1,4 +1,5 @@
 package gui.table;
+import gui.hundler.FunctionHundler;
 import gui.table.model.TransactionTableModel;
 import gui.table.rendered.MainTableSellRenderer;
 import settings.Style;
@@ -11,13 +12,13 @@ public class TransactionTableData extends TableData {
     private static String[] columns = new String[]{"DATE","ACCOUNT","ARTICLES","AMOUNT","NOTICE"};
     private static final ImageIcon[] icons = new ImageIcon[]{Style.ICON_DATE,Style.ICON_ACCOUNTS,Style.ICON_ARTICLES,Style.ICON_AMOUNT,Style.ICON_NOTE};
 
-    public TransactionTableData() {
-        super(new TransactionTableModel(columns),columns,icons);
+    public TransactionTableData(FunctionHundler hundler) {
+        super(new TransactionTableModel(columns),hundler,columns,icons);
         init();
 
     }
-    public TransactionTableData(int count) {
-        super(new TransactionTableModel(columns,count),columns,icons);
+    public TransactionTableData(int count,FunctionHundler hundler) {
+        super(new TransactionTableModel(columns,count),hundler,columns,icons);
         init();
     }
 

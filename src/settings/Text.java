@@ -148,6 +148,17 @@ final  public  class Text {
          data.put("CHART_INCOME","Доходы по статьям");
          data.put("CHART_EXP","Доходы по статьям");
          data.put("STATISTICS","Статистика");
+         data.put("ERROR_UPDATE_CURRENCIES","Ошибка при обновлении валют");
+         data.put("EXIT_FILE_CONFIRM","Подтвердите что действительно хотите выйте");
+         data.put("CONFIRMATION_ACTION","Подтверждение действия");
+         data.put("FILE_SAVE","FILE_SAVE");
+         data.put("ACCOUNT","Счета");
+         data.put("PROGRAMM","Програмные файлы");
+         data.put("DELETE_OPTION","Желаете ли Вы удалить строку");
+
+         data.put("LABEL_NOTE","Примечания");
+
+
 
 
      }
