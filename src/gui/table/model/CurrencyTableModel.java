@@ -20,14 +20,14 @@ public class CurrencyTableModel extends  MainTableModel {
 
     @Override
     protected void updateData() {
-        data = SaveData.getInstance().getArticles();
+        data = SaveData.getInstance().getCurrencies();
 
     }
 
     @Override
     public Object getValueAt(int row, int column) {
         if(data.isEmpty())return null;
-        Currency currency= (Currency) data.get(row);
+        Currency currency = (Currency) data.get(row);
         switch (column) {
             case TITLE:
                 return currency.getTitle();

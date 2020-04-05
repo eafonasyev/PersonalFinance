@@ -37,7 +37,7 @@ public class AccountEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected Common getCommonFromForm() throws ModelException {
+    public Common getCommonFromForm() throws ModelException {
         Account account = null;
         try {
             String tittle = ((JTextField) component.get("LABEL_TITLE")).getText();

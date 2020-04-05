@@ -1,5 +1,7 @@
 package gui;
 
+import gui.hundler.MainToolBarHundler;
+import gui.hundler.MainWindowHendler;
 import gui.panel.*;
 import menu.MainMenu;
 import settings.Style;
@@ -20,7 +22,7 @@ public class MainFrame extends JFrame implements Refresh {
         super(Text.get("PROGRAM_NAME"));
         setResizable(false);
         setIconImage(Style.ICON_MAIN.getImage());
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
         mb = new MainMenu(this);
         setJMenuBar(mb);
@@ -31,7 +33,7 @@ public class MainFrame extends JFrame implements Refresh {
         constraints.gridy = 0;
         constraints.gridwidth = 2;
 
-        tb = new MainToolBar();
+        tb = new MainToolBar(new MainToolBarHundler(this));
         add(tb,constraints);
 
         constraints.gridy = 1;
@@ -41,9 +43,13 @@ public class MainFrame extends JFrame implements Refresh {
         leftPanel = new LeftPanel(this);
         add(leftPanel,constraints);
 
-        setRightPanel(new TransactionPanel(this));
+        setRightPanel(new OverviewPanel(this));
 
         pack();
+
+        addWindowListener(new MainWindowHendler());
+
+
 
 
     }

@@ -2,6 +2,7 @@ package dialog;
 
 import gui.MainButton;
 import gui.MainFrame;
+import gui.hundler.AddEditDialogHundler;
 import objects.*;
 import org.jdatepicker.JDatePicker;
 import org.jdatepicker.impl.JDatePickerImpl;
@@ -11,6 +12,7 @@ import settings.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.WindowListener;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -25,6 +27,7 @@ abstract public class AddEditDialog extends JDialog {
     public AddEditDialog(MainFrame frame){
         super(frame,Text.get("ADD"),true);
         this.frame = frame;
+        addWindowListener(new AddEditDialogHundler(frame,this));
         setResizable(true);
 
     }
@@ -53,7 +56,7 @@ abstract public class AddEditDialog extends JDialog {
     }
     abstract protected void init();
     abstract  protected  void values();
-    abstract protected Common getCommonFromForm() throws ModelException;
+    abstract public Common getCommonFromForm() throws ModelException;
 
 
     private void setDialog() {
@@ -69,7 +72,6 @@ abstract public class AddEditDialog extends JDialog {
      getContentPane().setLayout(new BoxLayout( getContentPane(),BoxLayout.Y_AXIS));
         ((JPanel)getContentPane()).setBorder(Style.BORDER_DIALOG);
         ((JPanel)getContentPane()).setPreferredSize(Style.DIMENTION_EDIT);
-        System.out.println("ghxjhv");
         for(Map.Entry<String, JComponent> entry : component.entrySet()){
             String key = entry.getKey();
             JLabel label = new JLabel(Text.get(key));
@@ -92,18 +94,19 @@ abstract public class AddEditDialog extends JDialog {
                     ((UtilDateModel)((JDatePickerImpl)component).getModel()).setValue((Date) values.get(key));
                 }
             }
+            component.addKeyListener(new AddEditDialogHundler(frame,this));
             component.setAlignmentX(JComponent.LEFT_ALIGNMENT);
             add(label);
             add(Box.createVerticalStrut(Style.PUDDING_DIALOG));
             add(component);
             add(Box.createVerticalStrut(Style.PUDDING_DIALOG));
         }
-        MainButton ok = new MainButton(Text.get("ADD"),Style.ICON_EDIT_ADD,null,HundlerCode.ADD);
+        MainButton ok = new MainButton(Text.get("ADD"),Style.ICON_EDIT_ADD,new AddEditDialogHundler(frame,this),HundlerCode.ADD);
         if(!isAdd()){
             ok.setText("EDIT");
             ok.setActionCommand("EDIT");
         }
-        MainButton cancel = new MainButton(Text.get("CANCEL"),Style.ICON_CANCEL,null,HundlerCode.CANCEL);
+        MainButton cancel = new MainButton(Text.get("CANCEL"),Style.ICON_CANCEL,new AddEditDialogHundler(frame,this),HundlerCode.CANCEL);
         JPanel panelButton = new JPanel();
         panelButton.setLayout(new BorderLayout());
         panelButton.add(ok,BorderLayout.WEST);

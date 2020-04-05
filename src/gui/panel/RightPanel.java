@@ -45,7 +45,7 @@ abstract public class RightPanel extends AbstractPanel {
     @Override
     public void refresh() {
         super.refresh();
-        if (td != null) td.refresh();
+        if (td != null ) td.refresh();
         for (JPanel panel : panels) {
             if (panel instanceof Refresh) ((Refresh) panel).refresh();
         }

@@ -33,7 +33,7 @@ public class TransactionEditDialog extends AddEditDialog {
 
         values.put("LABEL_DATE", new Date());
         values.put("LABEL_AMOUNT",Format.amount(0));
-        values();
+        if (!isAdd()){ values();}
 
     }
 
@@ -49,19 +49,19 @@ public class TransactionEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected Common getCommonFromForm() throws ModelException {
+    public Common getCommonFromForm() throws ModelException {
         Transaction transaction = null;
         try {
-            Date date =(Date) ((JDatePickerImpl) component.get("LABEL_DATE")).getModel().getValue();
+            Date date = (Date) ((JDatePickerImpl) component.get("LABEL_DATE")).getModel().getValue();
             String amount = ((JTextField) component.get("LABEL_AMOUNT")).getText();
             String note = ((JTextField) component.get("LABEL_NOTE")).getText();
             Article articles = (Article)((CommonComboBox) component.get("LABEL_ARTICLES")).getSelectedItem();
             Account account = (Account)((CommonComboBox) component.get("LABEL_ACCOUNTS")).getSelectedItem();
-            transaction = new Transaction(articles,account,Format.formatAmountToNumber(amount),note);
+            return  new Transaction(articles,account,Format.formatAmountToNumber(amount),note,date);
 
         } catch (NumberFormatException e) {
           throw  new ModelException(ModelException.AMOUNT_FORMAT);
         }
-        return transaction;
+
     }
 }

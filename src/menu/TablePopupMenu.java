@@ -1,6 +1,7 @@
 package menu;
 
 import gui.Refresh;
+import gui.hundler.FunctionHundler;
 import settings.HundlerCode;
 import settings.Style;
 
@@ -8,8 +9,10 @@ import javax.swing.*;
 import java.util.logging.Handler;
 
 public class TablePopupMenu extends JPopupMenu implements Refresh {
-    public TablePopupMenu(){
+    private  FunctionHundler handler;
+    public TablePopupMenu(FunctionHundler hundler){
         super();
+        this.handler = hundler;
         init();
     }
 
@@ -20,6 +23,9 @@ public class TablePopupMenu extends JPopupMenu implements Refresh {
         deleteItem.setActionCommand(HundlerCode.DELETE);
         editItem.setIcon(Style.ICON_MENU_EDIT);
         deleteItem.setIcon(Style.ICON_MENU_EDIT_DELETE);
+
+        editItem.addActionListener(handler);
+        deleteItem.addActionListener(handler);
 
         add(editItem);
         add(deleteItem);

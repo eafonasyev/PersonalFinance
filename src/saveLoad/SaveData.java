@@ -156,7 +156,8 @@ public class SaveData extends Common{
            if(ref.contains(c)) throw new ModelException(ModelException.IS_EXIST);
            ref.add(c);
            c.postAdd(this);
-           sort();
+          // sort();
+
            saved = false;
     }
     public void edit(Common oldC, Common newC) throws ModelException {
@@ -165,7 +166,7 @@ public class SaveData extends Common{
         ref.set(ref.indexOf(oldC),newC);
         oldCommon = oldC;
         newC.postEdit(this);
-        sort();
+      //  sort();
         saved = false;
 
     }

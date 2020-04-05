@@ -21,7 +21,6 @@ public class StatisticsPanel extends RightPanel{
                              new StatisticsTypePanel(frame,"CHART_INCOME"),
                              new Chart(Statistics.getDataForChartIncomeArticles(),Text.get("CHART_INCOME"),SaveData.getInstance().getBaseCurency().getCode()).getPanel()
         });
-        System.out.println(Statistics.getDataForChartIncomeArticles());
     }
 
     public void nextType(){

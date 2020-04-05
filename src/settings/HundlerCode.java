@@ -23,6 +23,7 @@ package settings;
      public static  final String TOOLBAR_ARTICLES = "TOOLBAR_ARTICLES";
      public static  final String TOOLBAR_ACCOUNTS = "TOOLBAR_ACCOUNTS";
      public static  final String TOOLBAR_TRANSACTIONS = "TOOLBAR_TRANSACTIONS";
+     public static  final String TOOLBAR_TRANSFERS = "TOOLBAR_TRANSFERS";
      public static  final String TOOLBAR_CURRENCIES = "TOOLBAR_CURRENCIES";
      public static  final String TOOLBAR_STATISTICS = "TOOLBAR_STATISTICS";
      public static  final String TOOLBAR_HELP = "TOOLBAR_HELP";

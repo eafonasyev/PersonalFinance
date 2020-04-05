@@ -3,8 +3,7 @@ package menu;
 import gui.EnableEditDelete;
 import gui.MainFrame;
 import gui.Refresh;
-import gui.hundler.Hundler;
-import gui.hundler.MenuFileHundler;
+import gui.hundler.*;
 import org.w3c.dom.html.HTMLAnchorElement;
 import settings.HundlerCode;
 import settings.Settings;
@@ -43,9 +42,9 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
         add(help);
 
         MenuFileHundler fileHundler = new MenuFileHundler(frame);
-        MenuFileHundler editHundler = new MenuFileHundler(frame);
-        MenuFileHundler viewHundler = new MenuFileHundler(frame);
-        MenuFileHundler helpHundler = new MenuFileHundler(frame);
+        MenuEditHundler editHundler = new MenuEditHundler(frame);
+        MenuViewHundler viewHundler = new MenuViewHundler(frame);
+        MenuHelpHundler helpHundler = new MenuHelpHundler(frame);
 
 
         addMenuItem(file,fileHundler,Text.get("FILE_MENU_NEW"),Style.ICON_MENU_FILE_NEW,HundlerCode.MENU_FILE_NEW);
@@ -64,10 +63,8 @@ public class MainMenu extends JMenuBar implements Refresh, EnableEditDelete {
         addMenuItem(view,viewHundler,Text.get("MENU_VIEW_ARTICLES"),Style.ICON_MENU_VIEW_ARTICLES,HundlerCode.MENU_VIEW_ARTICLES);
         addMenuItem(view,viewHundler,Text.get("MENU_VIEW_TRANSACTIONS"),Style.ICON_MENU_VIEW_TRANSACTIONS,HundlerCode.MENU_VIEW_TRANSACTIONS);
         addMenuItem(view,viewHundler,Text.get("MENU_VIEW_TRANSFERS"),Style.ICON_MENU_VIEW_TRANSFERS,HundlerCode.MENU_VIEW_TRANSFERS);
-        addMenuItem(view,viewHundler,Text.get("MENU_VIEW_HELP"),Style.ICON_MENU_VIEW_HELP,HundlerCode.MENU_VIEW_HELP);
-        addMenuItem(view,viewHundler,Text.get("MENU_VIEW_STATISTICS"),Style.ICON_MENU_VIEW_STATISTICS,HundlerCode.MENU_VIEW_STATISTICS);
         addMenuItem(view,viewHundler,Text.get("MENU_VIEW_CURRENCIES"),Style.ICON_MENU_VIEW_CURRIENCIES,HundlerCode.MENU_VIEW_CURRENCIES);
-
+        addMenuItem(view,viewHundler,Text.get("MENU_VIEW_STATISTICS"),Style.ICON_MENU_VIEW_STATISTICS,HundlerCode.MENU_VIEW_STATISTICS);
         addMenuItem(help,helpHundler,Text.get("MENU_HELP_ABOUT"),Style.ICON_MENU_HELP,HundlerCode.MENU_HELP_ABOUT);
     }
     private JMenuItem addMenuItem(JMenu menu,Hundler lisener, String menuName, ImageIcon icon, String action, int key){

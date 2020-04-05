@@ -18,7 +18,7 @@ public class AboutDialog extends JDialog {
         add(pane);
         pack();
         setLocationRelativeTo(null);
-        //setSize(500,300);
+        setSize(500,300);
 
     }
 

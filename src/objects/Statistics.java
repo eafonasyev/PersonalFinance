@@ -40,7 +40,7 @@ public class Statistics {
         List<Transaction> transactions = SaveData.getInstance().getFilterTransaction();
         HashMap<String,Double> data = new HashMap<>();
         for (Transaction t : transactions){
-            if((income && t.getAmount()> 0) || (!income && t.getAmount() > 0)){
+            if((income && t.getAmount()> 0) || (!income && t.getAmount() < 0)){
                 String key = t.getArticle().getTitle();
                 double summa = 0;
                 double amount = t.getAmount();

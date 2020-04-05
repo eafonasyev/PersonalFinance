@@ -2,6 +2,7 @@ package gui.panel;
 
 import gui.MainButton;
 import gui.MainFrame;
+import gui.hundler.MenuFilterHundler;
 import objects.Filter;
 import saveLoad.SaveData;
 import settings.Format;
@@ -24,9 +25,9 @@ public class FilterPanel extends AbstractPanel {
         FlowLayout  layout = new FlowLayout();
         layout.setVgap(0);
         setLayout(layout);
-        MainButton leftButton = new MainButton(Style.ICON_LEFT,null,HundlerCode.LEFT);
-        MainButton periodButton = new MainButton(Format.getTitleFilter(SaveData.getInstance().getFilter()),null,HundlerCode.STEP);
-        MainButton rightButton = new MainButton(Style.ICON_RIGHT,null,HundlerCode.RIGTH);
+        MainButton leftButton = new MainButton(Style.ICON_LEFT,new MenuFilterHundler(frame),HundlerCode.LEFT);
+        MainButton periodButton = new MainButton(Format.getTitleFilter(SaveData.getInstance().getFilter()),new MenuFilterHundler(frame),HundlerCode.STEP);
+        MainButton rightButton = new MainButton(Style.ICON_RIGHT,new MenuFilterHundler(frame),HundlerCode.RIGTH);
 
         setBorder(Style.LEFT_PANEL_BORDER);
 

@@ -23,25 +23,25 @@ public class ModelException extends Exception {
         switch (code)
         {
             case TITLE_EMPTY:
-                return Text.get("ERROR_TITLE_EMPTY");
+                return  "ERROR_TITLE_EMPTY";
             case IS_EXIST:
-                return Text.get("ERROR_IS_EXIST");
+                return  "ERROR_IS_EXIST";
             case DATE_FORMAT:
-                 return Text.get("ERROR_DATE_FORMAT");
+                 return "ERROR_DATE_FORMAT";
             case CODE_EMPTY:
-                return Text.get("ERROR_CODE_EMPTY");
+                return  "ERROR_CODE_EMPTY";
             case CURRENCY_EMPTY:
-                return Text.get("ERROR_ARTICLE_EMPTY");
+                return "ERROR_ARTICLE_EMPTY";
             case ARTICLE_EMPTY:
-                return Text.get("ERROR_ARTICLE_EMPTY");
+                return "ERROR_ARTICLE_EMPTY";
             case ACCOUNT_EMPTY:
-                return Text.get("ERROR_ACCOUNT_EMPTY");
+                return "ERROR_ACCOUNT_EMPTY";
             case RATE_INNCORRECT:
-                return Text.get("ERROR_RATE_INCORRECT");
+                return "ERROR_RATE_INCORRECT";
             case AMOUNT_FORMAT:
-                return Text.get("ERROR_AMOUNT_FORMAT");
+                return "ERROR_AMOUNT_FORMAT";
             case NO_BASE_CURRENCY:
-                return Text.get("ERROR_NO_BASE_CURRENCY");
+                return "ERROR_NO_BASE_CURRENCY";
 
         }
         return "";

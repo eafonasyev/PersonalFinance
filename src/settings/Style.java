@@ -11,6 +11,8 @@ public class Style {
     public static final Color COLOR_AMOUNT_NEGATIVE = Color.RED;
     public static final Color COLOR_AMOUNT_POSITIVE = Color.green;
     public static final Color COLOR_BOTTON_NORMAL = new Color(240, 240, 240, 240);
+    public static final Color COLOR_CURRENCY_OFF = Color.LIGHT_GRAY;
+    public static final Color COLOR_CURRENCY_ON = Color.GRAY;
 
     public static final Font FONT_BOTTON_TOOLBAR = new Font("Roboto-ligth", Font.BOLD, 14);
     public static final Font FONT_BOTTON_MAIN = new Font("Roboto-ligth", Font.BOLD, 14);
@@ -24,20 +26,20 @@ public class Style {
     public static final EmptyBorder EMPTY_BORDER = new EmptyBorder(10, 10, 10, 10);
     public static final EmptyBorder LEFT_PANEL_BORDER = new EmptyBorder(5, 5, 5, 5);
     public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
-    public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(700,400);
-    public static final Dimension DIMENTION_CHART = new Dimension(700,400);
-    public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
-    public static final Color COLOR_CURRENCY_OFF = Color.LIGHT_GRAY;
-    public static final Color COLOR_CURRENCY_ON = Color.GRAY;
     public static final int WIDTH_FILTER_BUTON = 200;
-    public static final Dimension DIMENTION_EDIT = new Dimension(300,500);
     public static EmptyBorder MAIN_TOOLBAR = new EmptyBorder(10,10,10,10);
+
+    public static final Dimension DIMENTION_DIALOG_TEXFILD_SIZE = new Dimension(700,400);
+    public static final Dimension DIMENTION_CHART = new Dimension(718,450);
+    public static final Dimension DIMENTION_LEFT_PANEL = new Dimension(10,10);
+    public static final Dimension DIMENTION_EDIT = new Dimension(300,500);
 
     public static final ImageIcon ICON_MAIN = new ImageIcon("image/pigs.png");
     public static final ImageIcon ICON_TOOLBAR_OVERVIEW = new ImageIcon("image/icon_toolbar_overview.png");
     public static final ImageIcon ICON_TOOLBAR_ACTICLES = new ImageIcon("image/icon_toolbar_articles.png");
     public static final ImageIcon ICON_TOOLBAR_STATISTICS = new ImageIcon("image/icon_toolbar_statistics.png");
     public static final ImageIcon ICON_TOOLBAR_TRANSACTIONS = new ImageIcon("image/icon_toolbar_transactions.png");
+    public static final ImageIcon ICON_TOOLBAR_TRANSFER = new ImageIcon("image/ICON_TOOLBAR_TRANSFER2.png");
     public static final ImageIcon ICON_TOOLBAR_ACCOUNTS = new ImageIcon("image/icon_toolbar_accounts.png");
     public static final ImageIcon ICON_TOOLBAR_CURRENCIES = new ImageIcon("image/icon_toolbar_currencies.png");
     public static final ImageIcon ICON_TOOLBAR_HELP = new ImageIcon("image/ICON_TOOLBAR_HELP.png");
@@ -78,7 +80,6 @@ public class Style {
     public static final ImageIcon ICON_BASE = new ImageIcon("image/ICON_BASE.png");
     public static final ImageIcon ICON_RATE = new ImageIcon("image/ICON_RATE.png");
     public static final ImageIcon ICON_STATISTICS  = new ImageIcon("image/ICON_RATE.png");
-
     public static final ImageIcon ICON_FROM_ACCOUNT = new ImageIcon("image/ICON_FROM_ACCOUNT.png");
     public static final ImageIcon ICON_TO_ACCOUNT = new ImageIcon("image/ICON_TO_ACCOUNT.png");
     public static final ImageIcon ICON_FROM_AMOUNT = new ImageIcon("image/ICON_FROM_AMOUNT.png");

@@ -41,14 +41,14 @@ public class LeftPanel extends AbstractPanel {
     }
 
     private void addBalance() {
-        for(Currency currency : SaveData.getInstance().getCurrencies()) {
+        for(Currency currency : SaveData.getInstance().getEnableCurrencies()) {
             add(Box.createVerticalStrut(Style.PUDDING_BALLANCE));
             add(new PanelBalanceCurrency(currency, Statistics.getBalance(currency)));
         }
     }
 
     private void addBalanceCurrency() {
-        for(Currency currency : SaveData.getInstance().getCurrencies()) {
+        for(Currency currency : SaveData.getInstance().getEnableCurrencies()) {
             add(Box.createVerticalStrut(Style.PUDDING_BALLANCE));
             add(new PanelBalanceCurrency(currency, Statistics.getBalanceCurrency(currency)));
         }

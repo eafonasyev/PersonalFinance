@@ -2,6 +2,7 @@ package gui.panel;
 
 import gui.MainButton;
 import gui.MainFrame;
+import gui.hundler.ChartHundler;
 import settings.HundlerCode;
 import settings.Text;
 
@@ -15,7 +16,7 @@ public final class StatisticsTypePanel extends AbstractPanel {
 
     @Override
     protected void init() {
-        MainButton type = new MainButton(title,null,HundlerCode.TYPE);
+        MainButton type = new MainButton(title, new ChartHundler(frame),HundlerCode.TYPE);
         add(type);
 
     }

@@ -49,7 +49,7 @@ public class TransfersEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected Common getCommonFromForm() throws ModelException {
+    public Common getCommonFromForm() throws ModelException {
         Transfer transfers = null;
         try {
             Date date =(Date) ((JDatePickerImpl) component.get("LABEL_DATE")).getModel().getValue();
@@ -58,7 +58,7 @@ public class TransfersEditDialog extends AddEditDialog {
             Account accountFrom = (Account)((CommonComboBox) component.get("LABEL_ACCOUNTS_FROM")).getSelectedItem();
             Account accountTo = (Account)((CommonComboBox) component.get("LABEL_ACCOUNTS_TO")).getSelectedItem();
             String note = ((JTextField) component.get("LABEL_NOTE")).getText();
-            transfers = new Transfer(accountFrom,accountTo,Format.formatAmountToNumber(amountFrom),Format.formatAmountToNumber(amountTo),note);
+            transfers = new Transfer(accountFrom,accountTo,Format.formatAmountToNumber(amountFrom),Format.formatAmountToNumber(amountTo),note,date);
 
         } catch (NumberFormatException e) {
           throw  new ModelException(ModelException.AMOUNT_FORMAT);

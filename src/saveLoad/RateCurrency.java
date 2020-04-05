@@ -14,7 +14,6 @@ public class RateCurrency  {
         HashMap<String,NodeList> result = new HashMap();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY");
         String url = "http://cbr.ru/scripts/XML_daily.asp?date_req="+dateFormat.format(new Date());
-        System.out.println(url);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
             Document doc = factory.newDocumentBuilder().parse(new URL(url).openStream());

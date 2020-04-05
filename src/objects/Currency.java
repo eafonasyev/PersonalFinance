@@ -9,15 +9,12 @@ public class Currency extends Common {
     private String title;
     private String code;
     private double rate;
-    private boolean isOn;
-    private boolean isBase;
+    private boolean on;
+    private boolean base;
 
-    public Currency() {
-    }
+    public Currency() {}
 
-
-    public Currency(String title, String code, double rate, boolean isOn, boolean isBase) throws Exception {
-
+    public Currency(String title, String code, double rate, boolean on, boolean base) throws ModelException {
         if (title.length() == 0) throw new ModelException(ModelException.TITLE_EMPTY);
         if (code.length() == 0) throw new ModelException(ModelException.CODE_EMPTY);
         if (rate <= 0) throw new ModelException(ModelException.RATE_INNCORRECT);
@@ -25,9 +22,11 @@ public class Currency extends Common {
         this.title = title;
         this.code = code;
         this.rate = rate;
-        this.isOn = isOn;
-        this.isBase = isBase;
+        this.on = on;
+        this.base = base;
+        if (this.base) this.on = true;
     }
+
     public String getTitle() {
         return title;
     }
@@ -38,6 +37,7 @@ public class Currency extends Common {
 
     public String getCode() { return code;
     }
+
     public void setCode(String code) {
         this.code = code;
     }
@@ -51,54 +51,58 @@ public class Currency extends Common {
     }
 
     public boolean getOn() {
-        return isOn;
+        return on;
     }
 
     public void setOn(boolean on) {
-        isOn = on;
+        this.on = on;
     }
 
     public boolean getBase() {
-        return isBase;
+        return base;
     }
 
     public void setBase(boolean base) {
-        isBase = base;
+        this.base = base;
     }
 
     @Override
     public String toString() {
-        return  title ;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Currency)) return false;
-        Currency currency = (Currency) o;
-        return Objects.equals(code, currency.code);
+        return "Currency{" + "title=" + title + ", code=" + code + ", rate=" + rate + ", isOn=" + on + ", isBase=" + base + '}';
     }
 
     @Override
     public int hashCode() {
+        int hash = 5;
+        hash = 29 * hash + Objects.hashCode(this.code);
+        return hash;
+    }
 
-        return Objects.hash(code);
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Currency other = (Currency) obj;
+        if (!Objects.equals(this.code, other.code)) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public String getValueForComboBox() {
-        return super.getValueForComboBox();
-    }
-    public double getRateByCurrency(Currency currency){
-        return rate/currency.rate;
+        return title;
     }
 
-    @Override
-    public void postEdit(SaveData sd) {
-        clearBase(sd);
-        for(Account a : sd.getAccounts()){
-            if(a.getCurrency().equals((Currency) sd.getOldCommon())) a.setCurrency(this);
-        }
+    public double getRateByCurrency(Currency currency) {
+        return rate / currency.rate;
     }
 
     @Override
@@ -106,17 +110,34 @@ public class Currency extends Common {
         clearBase(sd);
     }
 
+    @Override
+    public void postEdit(SaveData sd) {
+        clearBase(sd);
+        for (Currency c : sd.getCurrencies()) {
+            for (Account a : sd.getAccounts()) {
+                if (a.getCurrency().equals(c)) a.setCurrency(c);
+            }
+            for (Transaction t : sd.getTransactions())
+                if (t.getAccount().getCurrency().equals(c)) t.getAccount().setCurrency(c);
+            for (Transfer t : sd.getTransfers()) {
+                if (t.getFromAccount().getCurrency().equals(c)) t.getFromAccount().setCurrency(c);
+                if (t.getToAccount().getCurrency().equals(c)) t.getToAccount().setCurrency(c);
+            }
+        }
+
+    }
+
     private void clearBase(SaveData sd) {
-        if(isBase){
+        if (base) {
             rate = 1;
             Currency old = (Currency) sd.getOldCommon();
-            for (Currency c : sd.getCurrencies()){
-                if(!this.equals(c)){
+            for (Currency c : sd.getCurrencies()) {
+                if (!this.equals(c)) {
                     c.setBase(false);
-                    if(old != null) c.setRate(c.rate/old.rate);
+                    if (old != null) c.setRate(c.rate / old.rate);
                 }
             }
         }
     }
-}
 
+}

@@ -79,8 +79,6 @@ public class PersonaFinance {
             sd.setArticles(articles);
             sd.setAccounts(accounts);
             sd.save();
-            System.out.println(sd);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

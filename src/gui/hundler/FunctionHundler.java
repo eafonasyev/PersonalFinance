@@ -35,13 +35,13 @@ public class FunctionHundler extends Hundler  implements MouseListener,KeyListen
         }
     }
 
-    private void add() {
+    public void add() {
         showAddEditDialog(null);
     }
-    private void edit() {
+    public void edit() {
         showAddEditDialog(getSelectedCommon());
     }
-    private void delete() {
+    public void delete() {
         Common c = getSelectedCommon();
         if(c != null){
             int result = ConfirmDialog.show(frame,"DELETE_OPTION","DELETE_TITLE");

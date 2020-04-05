@@ -62,10 +62,12 @@ public class Filter {
                 break;
             case STEP_YEAR:
                 this.from = new GregorianCalendar(
-                        calendar.get(Calendar.YEAR),0, 0, 0, 0).getTime();
+                        calendar.get(Calendar.YEAR),0, 1,
+                        0, 0,0).getTime();
                 this.to = new GregorianCalendar(
-                        calendar.get(Calendar.YEAR),11,31,23,59,59).getTime();
-                break;
+                        calendar.get(Calendar.YEAR),11,31,
+                        23,59,59).getTime();
+
         }
     }
 
@@ -81,7 +83,6 @@ public class Filter {
                     break;
                 case STEP_YEAR:
                     calendar.add(Calendar.YEAR, i);
-                    break;
             }
             setFromTo(calendar);
 
@@ -100,7 +101,7 @@ public class Filter {
         }
 
         public boolean checkDate(Date date){
-        return date.compareTo(from)>0 && date.compareTo(to)<0;
+        return true;// date.compareTo(from)>0 && date.compareTo(to)<0;
         }
 
 }

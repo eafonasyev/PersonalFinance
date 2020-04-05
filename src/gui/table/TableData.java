@@ -17,11 +17,12 @@ abstract public class TableData extends JTable implements Refresh {
     private final TablePopupMenu popup;
     private final String[] columns;
     private final ImageIcon[] icons;
+    private FunctionHundler hundler;
     public  TableData(MainTableModel tableModel, FunctionHundler hundler, String[] columns, ImageIcon[] icons){
         super(tableModel);
         this.columns = columns;
         this.icons = icons;
-        popup = new TablePopupMenu();
+        popup = new TablePopupMenu(hundler);
         getTableHeader().setFont(Style.FONT_PANEL_LEFT);
         setFont(Style.FONT_PANEL_LEFT);
         setRowHeight(getRowHeight()+Style.PUDDING_BALLANCE);
@@ -29,7 +30,7 @@ abstract public class TableData extends JTable implements Refresh {
         setAutoCreateRowSorter(true);
         setPreferredScrollableViewportSize(Style.DIMENTION_DIALOG_TEXFILD_SIZE);
         setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
+        this.hundler = hundler;
         addMouseListener(hundler);
         addKeyListener(hundler);
 
@@ -72,4 +73,7 @@ abstract public class TableData extends JTable implements Refresh {
 
     }
 
+    public  FunctionHundler getFunctionHundler(){
+        return this.hundler;
+    }
 }
