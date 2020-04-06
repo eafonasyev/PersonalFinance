@@ -37,7 +37,7 @@ public class TransfersEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected void values() {
+    protected void setValues() {
         Transfer transfers = (Transfer) c;
         values.put("LABEL_DATE",transfers.getDate());
         values.put("LABEL_ACCOUNTS_FROM",transfers.getFromAccount());

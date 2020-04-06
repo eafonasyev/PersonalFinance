@@ -19,7 +19,7 @@ public class ModelException extends Exception {
     public static final int AMOUNT_FORMAT = 9;
     public static final int NO_BASE_CURRENCY = 10;
 
-    public String geMessage(){
+    public String getMessage(){
         switch (code)
         {
             case TITLE_EMPTY:

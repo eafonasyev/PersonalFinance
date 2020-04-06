@@ -13,10 +13,10 @@ import java.util.logging.Logger;
 public class PersonaFinance {
     public static void main(String[] args) throws Exception {
         init();
-        SaveData sd = SaveData.getInstance();
+     //   SaveData sd = SaveData.getInstance();
 
-        sd.updateCurencies();
-        sd.save();
+     //   sd.updateCurencies();
+     //   sd.save();
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
 

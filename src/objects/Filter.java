@@ -67,7 +67,6 @@ public class Filter {
                 this.to = new GregorianCalendar(
                         calendar.get(Calendar.YEAR),11,31,
                         23,59,59).getTime();
-
         }
     }
 
@@ -86,6 +85,7 @@ public class Filter {
             }
             setFromTo(calendar);
 
+
         }
         public void next(){
         offSet(1);
@@ -101,7 +101,7 @@ public class Filter {
         }
 
         public boolean checkDate(Date date){
-        return true;// date.compareTo(from)>0 && date.compareTo(to)<0;
+        return  date.compareTo(from)>0 && date.compareTo(to)<0;
         }
 
 }

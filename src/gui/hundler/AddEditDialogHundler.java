@@ -6,6 +6,7 @@ import gui.MainFrame;
 import objects.ModelException;
 import saveLoad.SaveData;
 import settings.HundlerCode;
+import settings.Text;
 
 import java.awt.event.*;
 
@@ -20,10 +21,13 @@ public class AddEditDialogHundler extends Hundler implements KeyListener,WindowL
         try {
         switch(ea.getActionCommand()){
             case HundlerCode.ADD:
-                add();
+                addEdit(true);
+                frame.refresh();
                 break;
             case HundlerCode.EDIT:
-                edit();
+                addEdit(false);
+                frame.refresh();
+                break;
             case HundlerCode.CANCEL:
                 closeDialog();
           }
@@ -38,20 +42,17 @@ public class AddEditDialogHundler extends Hundler implements KeyListener,WindowL
     }
     private void addEdit(boolean add) {
         try {
-            if (add) SaveData.getInstance().add(dialog.getCommonFromForm());
-            else SaveData.getInstance().edit(dialog.getCommon(), dialog.getCommonFromForm());
+            if (add) {
+                SaveData.getInstance().add(dialog.getCommonFromForm());
+                frame.refresh();}
+            else {
+                SaveData.getInstance().edit(dialog.getCommon(), dialog.getCommonFromForm());
+                frame.refresh();}
             closeDialog();
         }
         catch (ModelException ex) {
-            ErrorDialog.show(frame, ex.getMessage());
+            ErrorDialog.show(frame, Text.get(ex.getMessage()));
         }
-    }
-    private void add() throws Exception{
-
-    }
-
-    private void edit() throws Exception{
-        SaveData.getInstance().edit(dialog.getCommon(),dialog.getCommonFromForm());
     }
 
     @Override

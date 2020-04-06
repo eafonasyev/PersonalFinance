@@ -7,6 +7,6 @@ import javax.swing.*;
 
 public class ErrorDialog {
     public static void show(MainFrame frame, String text){
-        JOptionPane.showMessageDialog(frame,text,text,JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(frame,Text.get(text),text,JOptionPane.ERROR_MESSAGE);
     }
 }

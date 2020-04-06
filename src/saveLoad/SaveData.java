@@ -74,7 +74,6 @@ public class SaveData extends Common{
                 return c.getTitle().compareToIgnoreCase(c1.getTitle());
             }
         });
-
     }
 
     public static SaveData getInstance(){
@@ -153,22 +152,18 @@ public class SaveData extends Common{
     }
    public void add (Common c) throws ModelException{
            List ref = getRef(c);
-           if(ref.contains(c)) throw new ModelException(ModelException.IS_EXIST);
            ref.add(c);
            c.postAdd(this);
           // sort();
-
            saved = false;
     }
     public void edit(Common oldC, Common newC) throws ModelException {
         List ref = getRef(oldC);
-        if (ref.contains(newC) && oldC != ref.get(ref.indexOf(newC))) throw new ModelException(ModelException.IS_EXIST);
         ref.set(ref.indexOf(oldC),newC);
         oldCommon = oldC;
         newC.postEdit(this);
       //  sort();
         saved = false;
-
     }
     public void remove(Common c){
         getRef(c).remove(c);
@@ -188,7 +183,6 @@ public class SaveData extends Common{
         for(Currency c : currencies){
              c.setRate(rates.get(c.getCode()));
         }
-
         for(Account a : accounts){
             a.getCurrency().setRate(rates.get(a.getCurrency().getCode()));
         }

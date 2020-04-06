@@ -21,7 +21,7 @@ public class ArticleEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected void values() {
+    protected void setValues() {
         Account account = (Account) c;
         values.put("LABEL_TITLE",account.getTitle());
 

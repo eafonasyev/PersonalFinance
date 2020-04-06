@@ -25,6 +25,7 @@ public class Currency extends Common {
         this.on = on;
         this.base = base;
         if (this.base) this.on = true;
+
     }
 
     public String getTitle() {
@@ -68,7 +69,7 @@ public class Currency extends Common {
 
     @Override
     public String toString() {
-        return "Currency{" + "title=" + title + ", code=" + code + ", rate=" + rate + ", isOn=" + on + ", isBase=" + base + '}';
+        return title;
     }
 
     @Override

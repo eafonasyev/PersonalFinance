@@ -28,7 +28,7 @@ public class AccountEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected void values() {
+    protected void setValues() {
         Account account = (Account) c;
         values.put("LABEL_TITLE",account.getTitle());
         values.put("LABEL_CURRENCIES",account.getCurrency());

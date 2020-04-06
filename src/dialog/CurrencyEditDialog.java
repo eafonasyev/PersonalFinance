@@ -36,7 +36,7 @@ public class CurrencyEditDialog extends AddEditDialog {
     }
 
     @Override
-    protected void values() {
+    protected void setValues() {
         Currency currency = (Currency) c;
         values.put("LABEL_TITLE", currency.getTitle());
         values.put("LABEL_CODE", currency.getCode());
@@ -61,6 +61,7 @@ public class CurrencyEditDialog extends AddEditDialog {
                 isBase = true;
             if (!isBase && c != null && ((Currency) c).getBase()) throw new ModelException(ModelException.NO_BASE_CURRENCY);
             return new Currency(title, code, Format.formatAmountToNumber(rate), isOn, isBase);
+
         } catch (NumberFormatException ex) {
             throw new ModelException(ModelException.AMOUNT_FORMAT);
         }

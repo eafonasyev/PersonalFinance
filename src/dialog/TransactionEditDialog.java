@@ -33,12 +33,12 @@ public class TransactionEditDialog extends AddEditDialog {
 
         values.put("LABEL_DATE", new Date());
         values.put("LABEL_AMOUNT",Format.amount(0));
-        if (!isAdd()){ values();}
+        if (!isAdd()){ setValues();}
 
     }
 
     @Override
-    protected void values() {
+    protected void setValues() {
         Transaction tranasaction = (Transaction) c;
         values.put("LABEL_DATE",tranasaction.getDate());
         values.put("LABEL_ARTICLES",tranasaction.getArticle());

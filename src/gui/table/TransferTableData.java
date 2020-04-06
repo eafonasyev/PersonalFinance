@@ -17,7 +17,6 @@ public class TransferTableData extends TableData {
     public TransferTableData(FunctionHundler hundler) {
         super(new TransferTableModel(columns),hundler,columns,icons);
 
-
     }
 
     @Override

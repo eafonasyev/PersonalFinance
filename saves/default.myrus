@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <data>
     <accounts>
-        <amount>20000.0</amount>
+        <amount>21000.0</amount>
         <currency>
             <base>false</base>
             <code>USD</code>
@@ -70,7 +70,7 @@
         <title>Обед</title>
     </article>
     <article>
-        <title>проценты по депозиту</title>
+        <title>fdhzcfhxcfh</title>
     </article>
     <article>
         <title>Тренажерный зал</title>
@@ -253,22 +253,23 @@
     </transactions>
     <transactions>
         <account>
-            <amount>0.0</amount>
+            <amount>21000.0</amount>
             <currency>
-                <base>true</base>
-                <code>RUB</code>
+                <base>false</base>
+                <code>USD</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Рубль</title>
+                <rate>77.733</rate>
+                <title>Доллар</title>
             </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
+            <startAmount>10000.0</startAmount>
+            <title>USD</title>
         </account>
-        <amount>-851.0</amount>
+        <amount>1000.0</amount>
         <article>
             <title>Обед</title>
         </article>
-        <date>2020-03-28T08:26:32.799+06:00</date>
+        <date>2020-03-28T00:00:00+06:00</date>
+        <note>fgdfgdf</note>
     </transactions>
     <transactions>
         <account>

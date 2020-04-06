@@ -19,8 +19,7 @@ public class TransferTableModel extends  MainTableModel {
     }
     @Override
     protected void updateData() {
-        SaveData.getInstance().getTransfers();
-
+       data = SaveData.getInstance().getFilterTransfers();
     }
 
     @Override

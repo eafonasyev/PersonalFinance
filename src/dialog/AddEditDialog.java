@@ -55,7 +55,7 @@ abstract public class AddEditDialog extends JDialog {
         return c == null;
     }
     abstract protected void init();
-    abstract  protected  void values();
+    abstract  protected  void setValues();
     abstract public Common getCommonFromForm() throws ModelException;
 
 
